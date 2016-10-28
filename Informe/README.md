@@ -115,7 +115,7 @@ Ahora se observará cual es la estructura básica del cuerpo de una página hech
 <br>
 <a name="HTML"></a>
 ### HTML
-Primero, se ven los diferentes tipos de cabeceras en HTML, que van desde h1 hasta h6.
+Primero, se ven los diferentes tipos de cabeceras en HTML, que van desde `<h1>` hasta `<h6>`.
 ```html
 <h1>Cabecera 1</h1>
 <h2>Cabecera 2</h2>
@@ -128,3 +128,12 @@ Primero, se ven los diferentes tipos de cabeceras en HTML, que van desde h1 hast
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html1.png">
 </p>
+
+<br>
+Ahora, para insertar un párrafo podemos utilizar la etiqueta `<p>`.
+```html
+<h1>Caballeros del Zodiaco</h1>
+<p>
+    Saint Seiya (聖闘士星矢, Seinto Seiya?), conocido en español como Los Caballeros del Zodiaco, es un manga shōnen creado en 1986 por Masami Kurumada y publicado originalmente desde enero del mismo año en la revista Shūkan Shōnen Jump de la editorial Shūeisha hasta diciembre de 1990. Fue adaptado posteriormente en una serie de anime de 145 episodios. También se han producido cinco películas animadas y una película con animación CG, además de varias precuelas y secuelas oficiales de la historia original.
+</p>
+```
