@@ -139,7 +139,7 @@ Ahora, para insertar un párrafo podemos utilizar la etiqueta `<p>`.
 ```
 <br>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html2.png" width="500">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html2.png" width="800">
 </p>
 
 <br>
@@ -201,4 +201,55 @@ Los navegadores incluyen una herramienta que nos permite ver y modificar el cód
 <br>
 <a name="Postman"></a>
 ### Postman
-Postman es una extensión de Google Chrome que nos permite tener un contacto más directo con los métodos y códigos de HTTP, para poder así observar su comportamiento.
+Postman es una extensión de Google Chrome que nos permite tener un contacto más directo con los métodos y códigos de HTTP, para poder así observar su comportamiento. Solamente debemos indicar el tipo de método y enviar una petición, con esto Postman nos detallará el resultado.
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/post.png">
+</p>
+
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<br>
+<a name="NPM"></a>
+### Node Pack Manager (NPM)
+NPM es un gestor de paquetes que nos permite instalar algunas herramientas desde una ventana de comandos, para esta práctica en específico, instalaremos una que nos permita levantar un servidor.
+<br>
+Con el siguiente comando instalamos la herramienta: `npm install -g http-server`.
+<br>
+Ahora, con este comando levantamos el servidor: `http-server -c10`. Y listo, ya tenemos levantada nuestra página en localhost.
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/npm1.png">
+</p>
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/npm2.png" width="800">
+</p>
+
+<br>
+<a name="Tags"></a>
+### Tags
+Para finalizar, veremos algunas etiquetas que nos permitirán usar listas en una página en HTML.
+- Para listas no ordenadas utilizamos la etiqueta `<ul>`.
+- Para listas ordenadas utilizamos la etiqueta `<ol>`.
+- Para incluir elementos en las listas utlizamos la etiqueta `<li>`.
+```html
+<h3>Listas no ordenadas</h3>
+<ul>
+    <li>Saint Seiya</li>
+    <li>Aioria</li>
+    <li>Shiryu</li>
+</ul>
+
+<h3>Listas ordenadas</h3>
+<ol>
+    <li>Uno</li>
+    <li>Dos</li>
+    <li>Tres</li>
+    <li>Cuatro</li>
+</ol>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/tags.png">
+</p>
