@@ -267,4 +267,3 @@ Para finalizar, veremos algunas etiquetas que nos permitirán usar listas en una
 - Con las herramientas adecuadas, resulta sencillo conocer a fondo el funcionamiento de una página web, esto con respecto al Inspector, Postman y a levantar nuestra página web.
 - Se recomienda usar Emmet al momento de realizar la programación en HTML, ya que este facilita la escritura de código.
 - Se recomienda utilizar las herramientas indicadas para facilitar el aprendizaje web.
-- 
