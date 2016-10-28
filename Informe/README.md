@@ -88,5 +88,5 @@ El código de respuesta o retorno es un número que indica que ha pasado con la 
 ### XML
 Antes de empezar a programar en HTML, se analizó un poco el lenguaje XML ya que ambos utilizan tags o etiquetas.
 <p align="center">
-    <img src="https://github.com/Andreu-95/Tec_Web_Js/tree/01-HTML/Informe/Images/xml.png?raw=true">
+    <img src="https://github.com/Andreu-95/Tec_Web_Js/tree/01-HTML/Informe/Images/xml.png">
 </p>
