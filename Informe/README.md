@@ -42,7 +42,7 @@ Tema de la Práctica: `Introducción a la Web.`
 <a name="DefinicionWWW"></a>
 ### Definición WWW
 En informática, la World Wide Web (WWW) o red informática mundial es un sistema de distribución de documentos de hipertexto o hipermedios interconectados y accesibles vía Internet. Con un navegador web, un usuario visualiza sitios web compuestos de páginas web que pueden contener texto, imágenes, vídeos u otros contenidos multimedia, y navega a través de esas páginas usando hiperenlaces. (Fuente: [Wikipedia](https://es.wikipedia.org/wiki/World_Wide_Web))
-<br><br>
+<br>
 <a href="#Cabecera">Cabecera</a>
 
 <br>
@@ -50,7 +50,7 @@ En informática, la World Wide Web (WWW) o red informática mundial es un sistem
 ### Definición World Wide Web Consortium
 El Consorcio WWW, en inglés: World Wide Web Consortium (W3C), es un consorcio internacional que genera recomendaciones y estándares que aseguran el crecimiento de la World Wide Web a largo plazo.
 Este consorcio fue creado en octubre de 1994, y está dirigido por Tim Berners-Lee, el creador original del URL (Uniform Resource Locator, Localizador Uniforme de Recursos), del HTTP (HyperText Transfer Protocol, Protocolo de Transferencia de HiperTexto) y del HTML (Hyper Text Markup Language, Lenguaje de Marcado de HiperTexto), que son las principales tecnologías sobre las que se basa la Web. (Fuente: [Wikipedia](https://es.wikipedia.org/wiki/World_Wide_Web_Consortium))
-<br><br>
+<br>
 <a href="#Cabecera">Cabecera</a>
 
 <br>
@@ -66,8 +66,9 @@ Utilizado normalmente para actualizar contenidos, pero también pueden crearlos.
 ##### DELETE
 Simplemente elimina un resource identificado en la URI. Si se elimina correctamente devuelve 200 junto con un body response, o 204 sin body.
 ##### HEAD
-Es idéntido a GET, pero el servidor no devuelve el contenido en el HTTP response. Cuando se envía un HEAD request, significa que sólo se está interesado en el código de respuesta y los headers HTTP, no en el propio documento. Con este método el navegador puede comprobar si un documento se ha modificado, por razones de caching. Puede comprobar también directamente si el archivo existe. (Fuente: [Diego Lázaro](https://diego.com.es/metodos-http))
-<br><br>
+Es idéntido a GET, pero el servidor no devuelve el contenido en el HTTP response. Cuando se envía un HEAD request, significa que sólo se está interesado en el código de respuesta y los headers HTTP, no en el propio documento. Con este método el navegador puede comprobar si un documento se ha modificado, por razones de caching. Puede comprobar también directamente si el archivo existe. 
+(Fuente: [Diego Lázaro](https://diego.com.es/metodos-http))
+<br>
 <a href="#Cabecera">Cabecera</a>
 
 <br>
@@ -78,8 +79,9 @@ El código de respuesta o retorno es un número que indica que ha pasado con la 
 - Códigos con formato 2xx: Respuestas correctas. Indica que la petición ha sido procesada correctamente.
 - Códigos con formato 3xx: Respuestas de redirección. Indica que el cliente necesita realizar más acciones para finalizar la petición.
 - Códigos con formato 4xx: Errores causados por el cliente. Indica que ha habido un error en el procesado de la petición a causa de que el cliente ha hecho algo mal.
-- Códigos con formato 5xx: Errores causados por el servidor. Indica que ha habido un error en el procesado de la petición a causa de un fallo en el servidor. (Fuente: [Wikipedia](https://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol#C.C3.B3digos_de_respuesta))
-<br><br>
+- Códigos con formato 5xx: Errores causados por el servidor. Indica que ha habido un error en el procesado de la petición a causa de un fallo en el servidor. 
+(Fuente: [Wikipedia](https://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol#C.C3.B3digos_de_respuesta))
+<br>
 <a href="#Cabecera">Cabecera</a>
 
 <a name="Desarrollo"></a>
@@ -96,7 +98,7 @@ Antes de empezar a programar en HTML, se analizó un poco el lenguaje XML ya que
 <br>
 <a name="Doctype"></a>
 ### Doctype
-Ahora se observará cual es la estructura básica del cuerpo de una página hecha con HTML, donde todo inicia con el Doctype, y las etiquetas html, head y body.
+Ahora se observará cual es la estructura básica del cuerpo de una página hecha con HTML, donde todo inicia con el Doctype, y las etiquetas `<html>`, `<head>` y `<body>`.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -217,7 +219,9 @@ NPM es un gestor de paquetes que nos permite instalar algunas herramientas desde
 <br>
 Con el siguiente comando instalamos la herramienta: `npm install -g http-server`.
 <br>
-Ahora, con este comando levantamos el servidor: `http-server -c10`. Y listo, ya tenemos levantada nuestra página en localhost.
+Ahora, con este comando levantamos el servidor: `http-server -c10`. 
+<br>
+Y listo, ya tenemos levantada nuestra página en localhost.
 <br>
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/npm1.png">
