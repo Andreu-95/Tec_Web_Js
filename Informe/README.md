@@ -228,6 +228,9 @@ Ahora, con este comando levantamos el servidor: `http-server -c10`. Y listo, ya 
 </p>
 
 <br>
+<a href="#Cabecera">Cabecera</a>
+
+<br>
 <a name="Tags"></a>
 ### Tags
 Para finalizar, veremos algunas etiquetas que nos permitirán usar listas en una página en HTML.
@@ -253,3 +256,6 @@ Para finalizar, veremos algunas etiquetas que nos permitirán usar listas en una
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/tags.png">
 </p>
+
+<br>
+<a href="#Cabecera">Cabecera</a>
