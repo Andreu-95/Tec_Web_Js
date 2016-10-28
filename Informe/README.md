@@ -88,5 +88,43 @@ El código de respuesta o retorno es un número que indica que ha pasado con la 
 ### XML
 Antes de empezar a programar en HTML, se analizó un poco el lenguaje XML ya que ambos utilizan tags o etiquetas.
 <p align="center">
-    <img src="https://github.com/Andreu-95/Tec_Web_Js/tree/01-HTML/Informe/Images/xml.png">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/xml.png">
+</p>
+<br><br>
+<a href="#Cabecera">Cabecera</a>
+
+<br>
+<a name="Doctype"></a>
+### Doctype
+Ahora se observará cual es la estructura básica del cuerpo de una página hecha con HTML, donde todo inicia con el Doctype, y las etiquetas html, head y body.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<br>
+<a name="HTML"></a>
+### HTML
+Primero, se ven los diferentes tipos de cabeceras en HTML, que van desde h1 hasta h6.
+```html
+<h1>Cabecera 1</h1>
+<h2>Cabecera 2</h2>
+<h3>Cabecera 3</h3>
+<h4>Cabecera 4</h4>
+<h5>Cabecera 5</h5>
+<h6>Cabecera 6</h6>
+```
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html1.png">
 </p>
