@@ -137,3 +137,48 @@ Ahora, para insertar un párrafo podemos utilizar la etiqueta `<p>`.
     Saint Seiya (聖闘士星矢, Seinto Seiya?), conocido en español como Los Caballeros del Zodiaco, es un manga shōnen creado en 1986 por Masami Kurumada y publicado originalmente desde enero del mismo año en la revista Shūkan Shōnen Jump de la editorial Shūeisha hasta diciembre de 1990. Fue adaptado posteriormente en una serie de anime de 145 episodios. También se han producido cinco películas animadas y una película con animación CG, además de varias precuelas y secuelas oficiales de la historia original.
 </p>
 ```
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html2.png" width="500">
+</p>
+
+<br>
+Para agregar una imagen a la página, utilizamos la etiqueta `<img src="">` donde dentro de src indicaremos la url de la imagen. El tamaño lo podemos cambiar con width y height.
+```html
+<img src="http://www.imagenes-juegos.com/saint-seiya-los-caballeros-zodiaco-soldados-valientes-imagen-i318682-i.jpg" alt="Caballeros" width="750">
+```
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html4.png" width="500">
+</p>
+
+<br>
+Ahora, para agregar un enlance podemos utilizar la etiqueta `<a href=""></a>` donde dentro de href indicaremos la url del enlace y entre las etiquetas colocaremos o bien el texto del enlace o una imagen. Para saltos de línea utilizamos la etiqueta `<br>`.
+```html
+<a href="https://es.wikipedia.org/wiki/Saint_Seiya" target="_blank">Caballeros del Zodiaco Wikipedia</a>
+<br><br>  
+<a href="http://www.imagenes-juegos.com/saint-seiya-los-caballeros-zodiaco-soldados-valientes-imagen-i318682-i.jpg" target="_blank">
+    <img src="http://www.imagenes-juegos.com/saint-seiya-los-caballeros-zodiaco-soldados-valientes-imagen-i318682-i.jpg" alt="Caballeros" width="750">
+</a>
+```
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html3.png" width="500">
+</p>
+
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<br>
+<a name="EstilosCSS"></a>
+### Estilos CSS
+El lenguaje CSS nos permite modificar los estilos visuales de una página en HTML. A manera de ejemplo, se cambiará el color de fondo de los elementos de la página. La estructura de un estilo es `propiedadCSS:valorPropiedadCSS;`.
+```html
+<head style="background-color:red;">
+<p style="background-color:green">
+<body style="background-color:cyan;">
+```
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/css.png" width="500">
+</p>
