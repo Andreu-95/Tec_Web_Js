@@ -90,7 +90,7 @@ Antes de empezar a programar en HTML, se analizó un poco el lenguaje XML ya que
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/xml.png">
 </p>
-<br><br>
+<br>
 <a href="#Cabecera">Cabecera</a>
 
 <br>
@@ -139,7 +139,7 @@ Ahora, para insertar un párrafo podemos utilizar la etiqueta `<p>`.
 ```
 <br>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html2.png" width="800">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html2.png" width="1000">
 </p>
 
 <br>
@@ -163,7 +163,7 @@ Ahora, para agregar un enlance podemos utilizar la etiqueta `<a href=""></a>` do
 ```
 <br>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html3.png" width="500">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html5.png" width="500">
 </p>
 
 <br>
@@ -180,7 +180,7 @@ El lenguaje CSS nos permite modificar los estilos visuales de una página en HTM
 ```
 <br>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/css.png" width="800">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/css.png" width="1000">
 </p>
 
 <br>
@@ -224,7 +224,7 @@ Ahora, con este comando levantamos el servidor: `http-server -c10`. Y listo, ya 
 </p>
 <br>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/npm2.png" width="800">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/npm2.png" width="1000">
 </p>
 
 <br>
@@ -259,3 +259,12 @@ Para finalizar, veremos algunas etiquetas que nos permitirán usar listas en una
 
 <br>
 <a href="#Cabecera">Cabecera</a>
+
+<br>
+<a name="ConRec"></a>
+## Conclusiones y Recomendaciones
+- La práctica nos ayudó a conocer un poco los conceptos relacionados con lo que es la Web, a entender los componentes básicos de una página web y como cambiar sus estilos, aunque esto último no se revisó a fondo esta vez.
+- Con las herramientas adecuadas, resulta sencillo conocer a fondo el funcionamiento de una página web, esto con respecto al Inspector, Postman y a levantar nuestra página web.
+- Se recomienda usar Emmet al momento de realizar la programación en HTML, ya que este facilita la escritura de código.
+- Se recomienda utilizar las herramientas indicadas para facilitar el aprendizaje web.
+- 
