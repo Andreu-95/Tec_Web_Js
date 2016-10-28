@@ -180,5 +180,25 @@ El lenguaje CSS nos permite modificar los estilos visuales de una página en HTM
 ```
 <br>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/css.png" width="500">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/css.png" width="800">
 </p>
+
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<br>
+<a name="Inspeccionar"></a>
+### Herramienta Inspeccionar
+Los navegadores incluyen una herramienta que nos permite ver y modificar el código de una página web. También podemos observar los elementos de la página, el tiempo que le toma cargar a la página y demás.
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/ins.png">
+</p>
+
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<br>
+<a name="Postman"></a>
+### Postman
+Postman es una extensión de Google Chrome que nos permite tener un contacto más directo con los métodos y códigos de HTTP, para poder así observar su comportamiento.
