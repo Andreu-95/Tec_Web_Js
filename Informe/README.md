@@ -149,7 +149,7 @@ Para agregar una imagen a la página, utilizamos la etiqueta `<img src="">` dond
 ```
 <br>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html4.png" width="500">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html5.png" width="500">
 </p>
 
 <br>
@@ -163,7 +163,7 @@ Ahora, para agregar un enlance podemos utilizar la etiqueta `<a href=""></a>` do
 ```
 <br>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html5.png" width="500">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/01-HTML/Informe/Images/html4.png" width="500">
 </p>
 
 <br>
@@ -267,3 +267,6 @@ Para finalizar, veremos algunas etiquetas que nos permitirán usar listas en una
 - Con las herramientas adecuadas, resulta sencillo conocer a fondo el funcionamiento de una página web, esto con respecto al Inspector, Postman y a levantar nuestra página web.
 - Se recomienda usar Emmet al momento de realizar la programación en HTML, ya que este facilita la escritura de código.
 - Se recomienda utilizar las herramientas indicadas para facilitar el aprendizaje web.
+
+<br>
+<a href="#Cabecera">Cabecera</a>
