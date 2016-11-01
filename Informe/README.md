@@ -160,3 +160,29 @@ Entre las transformaciones 3D tenemos:
 
 <a name="Desarrollo"></a>
 ## Desarrollo de la Práctica
+<a name="CSS"></a>
+### CSS dentro de HTML
+Para usar código CSS dentro de HTML, es necesario utilizar la etiqueta `<style>`. Dentro de esta, colocamos las propiedades CSS con el siguiente formato: `NombreTag { Propiedad:valorPropiedad; .. }`.
+```css
+<style>
+    html {
+        background-color: crimson;
+    }
+    
+    body {
+        background-color: aqua;
+    }
+    
+    h1 {
+        background-color: firebrick;
+    }
+        
+    p {
+        background-color: chartreuse;
+    }
+</style>
+```
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css.png" width="1000">
+</p>
