@@ -320,8 +320,10 @@ Algo notable de Bootstrap, es que se preocupa de la relación que existe entre e
 ```
 <br>
 Para probar las clases de Bootstrap, vamos a crear varias tablas. Es importante tener en cuenta que las tablas ocupan 12 espacios, los cuales se usan para dividir a la tabla por el número de columnas y el tamaño de estas. Para las tables usaremos las clases `container`, `row`, `col-md-x`, `col-sm-x`, `col-lg-x` y `col-x-s`.
+<br><br>
+Para utilizar dos clases en una misma etiqueta, simplemente colocamos la primera seguida de la segunda: 
 <br>
-Para utilizar dos clases en una misma etiqueta, simplemente colocamos la primera seguida de la segunda: `class="clase1 clase2"`.
+`class="clase1 clase2"`.
 ```html
 <h1>Hola</h1>
 <div class="container" style="background-color:yellow">
