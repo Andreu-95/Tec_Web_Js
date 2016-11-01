@@ -6,8 +6,8 @@
     <title>Document</title>
     <script>
         // alert('Hola');
-        
-        var texto = "Texto";
+
+        /*var texto = "Texto";
         var textoNumero = "2";
         var numero = 1;
         var float = 1.234;
@@ -30,8 +30,75 @@
         console.log(booleanT);
         console.log(booleanF);
         console.log(varNull);
-        console.log(varUndefined);
+        console.log(varUndefined);*/
+
+        /*var arregloString = ['1', '2', '3', '4'];
+        console.log(arregloString);
         
+        var arregloNumeros = [1, 2, 3, 4];
+        console.log(arregloNumeros);
+        
+        var arregloFloat = [1.2, 2.3, 3.4, 4.5];
+        console.log(arregloFloat);
+        
+        var arregloBooleano = [false, true, true, false];
+        console.log(arregloBooleano);
+        
+        var arregloNull = [null, null, null, null];
+        console.log(arregloNull);
+        
+        var arregloUndefined = [undefined, undefined, undefined, undefined];
+        console.log(arregloUndefined);
+        
+        var arregloTodo = ['Nombre', 123, 3.1416, true, false, undefined, null, 'Apellido'];
+        console.log(arregloTodo);*/
+
+        var michelle = 'Michelle';
+        var andres = {
+            'nombre': 'Andrés',
+            'apellido': 'Guerra',
+            edad: 20,
+            mascotas: ['Toby', 'Sora', 'Mei', 'Chicky', {nombre: michelle}],
+            hermanos: [{
+                    nombre: 'Martín',
+                    apellido: 'Guerra'
+                    },
+                {
+                    nombre: 'Lucía',
+                    apellido: 'Guerra'
+                       }],
+            getNombre: function() {
+                return this.nombre;
+            },
+            getApellido: function() {
+                return this.apellido;
+            },
+            setApellido: function(apellido) {
+                this.apellido = apellido;
+            }
+        };
+        console.log(andres);
+        
+        /*console.log('Nombre');
+        console.log(andres.nombre);
+        
+        console.log('Apellido');
+        console.log(andres.apellido);*/
+        
+        console.log('Función 1');
+        console.log(andres.getNombre());
+        
+        console.log('Función 2');
+        console.log(andres.getApellido());
+        
+        andres.setApellido('Vásconez');
+        console.log(andres.getApellido());
+        
+        /*function getNombreAndres(){
+            return andres.nombre;
+        }
+        console.log(getNombreAndres());*/
+
         console.log('Hola desde la consola');
     </script>
 </head>
