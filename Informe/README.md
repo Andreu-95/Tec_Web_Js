@@ -246,3 +246,15 @@ Gracias a HTML5 podemos declarar etiquetas con cualquier nombre lo que nos permi
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css4.png" width="1000">
 </p>
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<a name="HojasEstilo"></a>
+### Hojas de Estilo
+Para no llenar nuestra página de tanto código CSS, podemos crear archivos conocidos como hojas de estilo, en donde pondremos todo nuestro código CSS para llamarlo y cargarlo desde HTML mediante la etiqueta `<link rel="stylesheet" href="">`. Es importante tener en cuenta que las hojas de estilo deben estar mínimo, al mismo nivel que el lugar en donde se levantó el servidor.
+```html
+<link rel="stylesheet" href="estilos.css">
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/hojas.png" width="1000">
+</p>
