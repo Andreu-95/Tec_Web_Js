@@ -54,6 +54,7 @@ Existen 4 tipos diferentes de combinadores:
 - Selector de hermano adyacente (+).
 - Selector de hermano general (~).
 (Fuente: [W3Schools](http://www.w3schools.com/css/css_combinators.asp))
+<br>
 #### Box Model
 Todos los elementos en HTML pueden ser considerados como cajas. En CSS, el término "modelo de cajas" es utilizado cuando hablamos del diseño y del entorno. En CSS, este modelo es esencialmente una caja que envuelve cada elemento HTML.
 <br>
