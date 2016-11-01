@@ -216,3 +216,20 @@ También podemos crear nuestras propias clases para usarlas dentro de las etique
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css2.png" width="1000">
 </p>
+
+<br>
+Podemos indicar el estilo también por ID. Para ello declaramos el estilo con el siguiente formato: `#nombreID {}`. Para usarlos en las etiquetas colocamos `id="nombreID"`.
+```html
+<style>        
+    #parrafoVerde {
+        background-color: deeppink;
+    }
+</style>
+```
+```html
+<p id="parrafoVerde" class="nombreClaseAmarillo">Párrafo Amarillo</p>
+```
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css3.png" width="1000">
+</p>
