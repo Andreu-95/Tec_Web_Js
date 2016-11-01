@@ -380,3 +380,15 @@ Para utilizar dos clases en una misma etiqueta, simplemente colocamos la primera
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/boot.png" width="1000">
 </p>
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<a name="ConRec"></a>
+## Conclusiones y Recomendaciones
+- Con CSS podemos mejorar de gran manera el apartado visual de nuestras páginas HTML, ya que la personalización es bastante amplia debido a las muchas características con las que cuenta este lenguaje.
+- Bootstrap nos sirve de plantilla de estilos para usarlos en nuestra página HTML, con ello se ahorra bastante tiempo al no tener que estar creando algo que ya está hecho, simplemente debemos conocer que es lo que queremos usar de nuestra plantilla de Bootstrap.
+- Se recomienda siempre usar CSS en conjunto con HTML para mejorar la presentación de nuestras páginas.
+- Se recomienda analizar siempre la relación de tamaño que exista entre los elementos y la pantalla para que así nuestra página se vea bien sin importar el tamaño.
+
+<br>
+<a href="#Cabecera">Cabecera</a>
