@@ -182,7 +182,6 @@ Para usar código CSS dentro de HTML, es necesario utilizar la etiqueta `<style>
     }
 </style>
 ```
-<br>
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css.png" width="1000">
 </p>
@@ -212,7 +211,6 @@ También podemos crear nuestras propias clases para usarlas dentro de las etique
 <p class="nombreClaseAmarillo">Párrafo Amarillo</p>
 <p>Último Párrafo sin Clase</p>
 ```
-<br>
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css2.png" width="1000">
 </p>
@@ -229,7 +227,22 @@ Podemos indicar el estilo también por ID. Para ello declaramos el estilo con el
 ```html
 <p id="parrafoVerde" class="nombreClaseAmarillo">Párrafo Amarillo</p>
 ```
-<br>
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css3.png" width="1000">
+</p>
+
+<br>
+Gracias a HTML5 podemos declarar etiquetas con cualquier nombre lo que nos permite crear estilos para las mismas con CSS.
+```html
+<style>        
+    cualquiera {
+        background-color: cornflowerblue;
+    }
+</style>
+```
+```html
+<cualquiera>Hola</cualquiera>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css4.png" width="1000">
 </p>
