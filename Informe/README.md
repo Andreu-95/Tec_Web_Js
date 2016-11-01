@@ -163,7 +163,7 @@ Entre las transformaciones 3D tenemos:
 <a name="CSS"></a>
 ### CSS dentro de HTML
 Para usar código CSS dentro de HTML, es necesario utilizar la etiqueta `<style>`. Dentro de esta, colocamos las propiedades CSS con el siguiente formato: `NombreTag { Propiedad:valorPropiedad; .. }`.
-```css
+```html
 <style>
     html {
         background-color: crimson;
@@ -185,4 +185,34 @@ Para usar código CSS dentro de HTML, es necesario utilizar la etiqueta `<style>
 <br>
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css.png" width="1000">
+</p>
+
+<br>
+También podemos crear nuestras propias clases para usarlas dentro de las etiquetas de HTML. Las clases tienen el siguiente formato: `.nombreClase {}`. Para colocarlas dentro de la etiqueta, colocamos `class="nombreClase"`.
+```html
+<style>        
+    .nombreClaseRojo {
+        background-color: red;
+    }
+    
+    .nombreClaseAzul {
+        background-color: blue;
+    }
+        
+    .nombreClaseAmarillo {
+        background-color: yellow;
+    }
+</style>
+```
+```html
+<p class="nombreClaseRojo">Párrafo Rojo</p>
+<h1 class="nombreClaseAmarillo">Amigos</h1>
+<p class="nombreClaseAzul">Párrafo Azul</p>
+<h1>Politécnicos</h1>
+<p class="nombreClaseAmarillo">Párrafo Amarillo</p>
+<p>Último Párrafo sin Clase</p>
+```
+<br>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/css2.png" width="1000">
 </p>
