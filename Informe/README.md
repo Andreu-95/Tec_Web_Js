@@ -255,6 +255,126 @@ Para no llenar nuestra página de tanto código CSS, podemos crear archivos cono
 ```html
 <link rel="stylesheet" href="estilos.css">
 ```
+```css
+/* estilos.css */
+html {
+    background-color: crimson;
+}
+  
+body {
+    background-color: aqua;
+}
+  
+h1 {
+    background-color: firebrick;
+}
+  
+p {
+    background-color: chartreuse;
+}
+  
+cualquiera {
+    background-color: cornflowerblue;
+}
+  
+.nombreClaseRojo {
+    background-color: red;
+}
+  
+.nombreClaseAzul {
+    background-color: blue;
+}
+  
+.nombreClaseAmarillo {
+    background-color: yellow;
+}
+  
+#parrafoVerde {
+    background-color: deeppink;
+}
+```
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/hojas.png" width="1000">
+</p>
+
+<br>
+Podemos colocar varias hojas de estilo en un mismo HTML, sin embargo, si los estilos se cruzan, la página utilizará los últimos que se carguen.
+```html
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="estilos2.css">
+<link rel="stylesheet" href="estilos3.css">
+```
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<a name="Bootstrap"></a>
+### Bootstrap
+Bootstrap nos provee una hoja de estilos, con varias propiedades ya creadas. Para usarlas, solo tenemos que cargar la hoja en nuestra página HTML y llamar a los estilos como clases.
+```html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+```
+<br>
+Algo notable de Bootstrap, es que se preocupa de la relación que existe entre el tamaño de la pantalla y los elementos de la página. Para ajustar esta relación podemos usar esto:
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+<br>
+Para probar las clases de Bootstrap, vamos a crear varias tablas. Es importante tener en cuenta que las tablas ocupan 12 espacios, los cuales se usan para dividir a la tabla por el número de columnas y el tamaño de estas. Para las tables usaremos las clases `container`, `row`, `col-md-x`, `col-sm-x`, `col-lg-x` y `col-x-s`.
+<br>
+Para utilizar dos clases en una misma etiqueta, simplemente colocamos la primera seguida de la segunda: `class="clase1 clase2"`.
+```html
+<h1>Hola</h1>
+<div class="container" style="background-color:yellow">
+    <h1>Hola</h1>
+    <div class="row" style="background-color:green">
+        <h1>Fila 1</h1>
+        <div class="col-md-4 borde">
+            <h2>Columna md 4 - 1</h2>
+        </div>
+        <div class="col-md-4 borde">
+            <h2>Columna md 4 - 2</h2>
+        </div>
+        <div class="col-md-4 borde">
+            <h2>Columna md 4 - 3</h2>
+        </div>
+    </div>
+    <div class="row" style="background-color:blue">
+        <h1>Fila 2</h1>
+        <div class="col-sm-3 borde">
+            <h3>CSM3-1</h3>
+        </div>
+        <div class="col-sm-3 borde">
+            <h3>CSM3-2</h3>
+        </div>
+        <div class="col-sm-3 borde">
+            <h3>CSM3-3</h3>
+        </div>
+        <div class="col-sm-3 borde">
+            <h3>CSM3-4</h3>
+        </div>
+    </div>
+    <div class="row" style="background-color:red">
+        <h1>Fila 3</h1>
+        <div class="col-lg-6 borde">
+            <h3>CLG6-1</h3>
+        </div>
+        <div class="col-lg-6 borde">
+            <h3>CLG6-2</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 borde">
+            <h2>CXS2-1</h2>
+        </div>
+        <div class="col-xs-5 borde">
+            <h2>CXS5-1</h2>
+        </div>
+        <div class="col-xs-5 borde">
+            <h2>CXS5-2</h2>
+        </div>
+    </div>
+</div>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/02-CSS/Informe/Images/boot.png" width="1000">
 </p>
