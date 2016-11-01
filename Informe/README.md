@@ -308,7 +308,7 @@ Podemos colocar varias hojas de estilo en un mismo HTML, sin embargo, si los est
 <a href="#Cabecera">Cabecera</a>
 
 <a name="Bootstrap"></a>
-### Bootstrap
+### Bootstrap Básico
 Bootstrap nos provee una hoja de estilos, con varias propiedades ya creadas. Para usarlas, solo tenemos que cargar la hoja en nuestra página HTML y llamar a los estilos como clases.
 ```html
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
