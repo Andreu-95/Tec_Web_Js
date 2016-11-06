@@ -18,9 +18,7 @@
     * <a href="#Validacion">Validación Web</a>
     * <a href="#SEO">SEO Web</a>
 - <a href="#Desarrollo">Desarrollo de la Práctica</a>
-    * <a href="#Small">Etiqueta Small</a>
-    * <a href="#Code">Etiqueta Code</a>
-    * <a href="#KBD">Etiqueta KBD</a>
+    * <a href="#Etiquetas">Etiquetas small, code, kbd</a>
     * <a href="#Tablas">Tablas con Bootstrap</a>
     * <a href="#Formularios">Formularios con Bootstrap</a>
 - <a href="#ConRec">Conclusiones y Recomendaciones</a>
@@ -125,5 +123,22 @@ Los sitios web añaden automáticamente nuevos sitios a su índice de búsqueda.
 <br>
 <a href="#Cabecera">Cabecera</a>
 
+<a name="Desarrollo"></a>
+## Desarrollo de la Práctica
+<a name="Etiquetas"></a>
+### Etiquetas small, code, kbd.
+- Con la etiqueta `<small>` hacemos que el texto se vea más pequeño y un poco más claro hacia el usuario.
+- Con la etiqueta `<code>` hacemos quel texto se visualice como si fuera código, con `&lt` y `&gt` colocamos '<' y '>' respectivamente.
+- Con la etiqueta `<kbd>` hacemos que el texto se asemeje a la entrada de un usuario.
+
+```html
+<h1>Mi título <small>este texto es más claro</small></h1>
+
+<h2>Mi ejemplo de código</h2>
+<p>El tag para describir imágenes es: <code>&lt;img&gt;</code></p>
+
+<h2>User inputs con Bootstrap</h2>
+<p>No está permitido por ejemplo el <kbd>ctrl</kbd>+<kbd>c</kbd> ni el <kbd>ctrl</kbd>+<kbd>v</kbd></p>
+```
 
 
