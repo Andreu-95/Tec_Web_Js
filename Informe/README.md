@@ -326,3 +326,13 @@ Con Bootstrap también podemos utilizar formularios que tengan un estilo en espe
 </p>
 <br>
 <a href="#Cabecera">Cabecera</a>
+
+<a name="ConRec"></a>
+## Conclusiones y Recomendaciones
+- Al conocer los estándares que se espera que tenga una página web, podemos crear páginas de alta calidad que satisfagan las necesidades de nuestros usuarios.
+- Con Bootstrap podemos dar un gran estilo visual a nuestras páginas web debido al gran número de clases con las que cuenta, solamente es cuestión de revisarlas.
+- Se recomienda seguir las recomendaciones respecto al diseño de páginas web para que estas sean de mejor calidad.
+- Se recomienda utilizar plantillas como Bootstrap para así fomentar la reutilización de código y no estar creando algo que ya está hecho.
+
+<br>
+<a href="#Cabecera">Cabecera</a>
