@@ -140,5 +140,189 @@ Los sitios web añaden automáticamente nuevos sitios a su índice de búsqueda.
 <h2>User inputs con Bootstrap</h2>
 <p>No está permitido por ejemplo el <kbd>ctrl</kbd>+<kbd>c</kbd> ni el <kbd>ctrl</kbd>+<kbd>v</kbd></p>
 ```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/03-Bootstrap/Informe/Images/tag1.png">
+</p>
+<br>
+<a href="#Cabecera">Cabecera</a>
 
+<a name="Tablas"></a>
+### Tablas con Bootstrap
+Para crear tablas usamos la etiqueta `<table>`, dentro de esta, indicamos las filas con la etiqueta `<tr>`, las cabeceras con la etiqueta `<th>` y los elementos con la etiqueta `<td>`.
+```html
+<table>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+    </tr>
+    <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+    </tr>
+    <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+    </tr>
+</table>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/03-Bootstrap/Informe/Images/table1.png">
+</p>
+<br>
+Gracias a Bootstrap podemos darle estilos a nuestras tablas, como hacer que estas sean a rayas, con borde, que cambien su color cuando son enfocadas, o que ocupen menos espacio. También podemos cambiar el color de las filas o celdas con las clases de Bootstrap.
 
+#### Tabla a rayas.
+```html
+<table class="table table-striped">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+    </tr>
+    <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+    </tr>
+    <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+    </tr>
+</table>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/03-Bootstrap/Informe/Images/table2.png" width="1000">
+</p>
+
+#### Tabla con borde
+```html
+<table class="table table-bordered">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+    </tr>
+    <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+    </tr>
+    <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+    </tr>
+</table>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/03-Bootstrap/Informe/Images/table3.png" width="1000">
+</p>
+
+#### Tabla con enfoque
+```html
+<table class="table table-hover">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+    </tr>
+    <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+    </tr>
+    <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+    </tr>
+</table>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/03-Bootstrap/Informe/Images/table4.png" width="1000">
+</p>
+
+#### Tabla condensada y con colores
+```html
+<table class="table table-condensed">
+    <tr class="active">
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+    </tr>
+    <tr class="success">
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+    </tr>
+    <tr class="info">
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+    </tr>
+    <tr class="warning">
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+    </tr>
+</table>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/03-Bootstrap/Informe/Images/table5.png" width="1000">
+</p>
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<a name="Formularios"></a>
+### Formularios con Bootstrap
+Con Bootstrap también podemos utilizar formularios que tengan un estilo en específico. Solamente debemos indicar a que clase pertenecen y añadirle los complementos necesarios para su funcionamiento.
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">:v</div>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <div class="input-group-addon">v:</div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/03-Bootstrap/Informe/Images/form1.png">
+</p>
+<br>
+<a href="#Cabecera">Cabecera</a>
