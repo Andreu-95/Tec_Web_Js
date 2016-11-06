@@ -74,7 +74,6 @@ El título de una página web es importante porque:
 - Es visible en las pestañas del navegador.
 - Se mostrará en los marcadores del usuario.
 
-<br>
 Por ello el título deberá ser, tan corto y descriptivo como sea posible. El título debe concordar con el contenido de la página.
 #### Elementos de cabecera.
 Existen varios niveles de cabeceras para usar. La cabecera `<h1>` debe ser utilizada para cabeceras principales, `<h2>` y `<h3>` para cabeceras de menor nivel. Con esto, evitamos problemas al momento de querer entender la jerarquía.
@@ -93,7 +92,6 @@ WAI es un conjunto de guías, para que desarrolladores web, creen páginas que s
 - Hacer que los visitantes se queden más en la página.
 - Hacer que la página pueda ser usada por personas con equipos viejos.
 
-<br>
 #### Recordar "alt".
 Existen varias razones por las cuales un navegador no mostrará una imagen, puede ser porque el usuario las desactivó, el navegador no tiene la capacidad para mostrarla o es un navegador por voz. Con el atributo `alt` el navegador mostrará el texto que se le coloque.
 #### No usar fuentes pequeñas.
