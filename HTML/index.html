@@ -153,7 +153,13 @@
             numSheep *= 4;
             console.log('There will be ' + numSheep + ' after ' + monthNumber + ' month(s)!');
             
-            if(numSheep > 10000)
+            if(monthNumber % 4 === 0)
+            {
+                var rem = numSheep * 3 / 4;
+                numSheep -= rem;
+                console.log('Removing ' + rem + ' sheep from the population');
+            }
+            else if(numSheep > 10000)
             {
                 numSheep /= 2;
                 console.log('Removing ' + numSheep + ' sheep from the population');
