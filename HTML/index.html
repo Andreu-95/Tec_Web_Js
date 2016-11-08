@@ -128,9 +128,9 @@
         console.log('Se acabó');
         console.log(arregloNumero);*/
         
-        /*var numSheep = 4;
+        var numSheep = 4;
         var monthNumber = 1;
-        var monthsToPrint = 12;*/
+        var monthsToPrint = 12;
         
         /*while(monthNumber <= monthsToPrint)
         {
@@ -148,13 +148,19 @@
         
         console.log('Se acabó');*/
         
-        /*for(monthNumber; monthNumber <= monthsToPrint; monthNumber++)
+        for(monthNumber; monthNumber <= monthsToPrint; monthNumber++)
         {
             numSheep *= 4;
             console.log('There will be ' + numSheep + ' after ' + monthNumber + ' month(s)!');
-        }*/
+            
+            if(numSheep > 10000)
+            {
+                numSheep /= 2;
+                console.log('Removing ' + numSheep + ' sheep from the population');
+            }
+        }
         
-        var count = 10;
+        /*var count = 10;
         
         while(count > 0)
         {
@@ -163,7 +169,7 @@
                 console.log(count);
             }
             count--;
-        }
+        }*/
     </script>
 </head>
 
