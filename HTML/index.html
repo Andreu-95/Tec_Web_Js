@@ -102,16 +102,31 @@
         console.log('Hola desde la consola');*/
         
         var count = 10;
+        var arregloNumero = [];
+        //var objeto= {};
         
         console.log('Empieza');
+        console.log(arregloNumero);
         
         while(count > 0)
         {
             console.log(count);
+            if(count % 2 === 0)
+            {
+                console.log('El número es par');
+            }
+            else
+            {
+                console.log('El número es impar');
+            }
+            arregloNumero.push(count);
             count--;
         }
         
+        arregloNumero.pop();
+        arregloNumero.splice(3, 1, 11);
         console.log('Se acabó');
+        console.log(arregloNumero);
     </script>
 </head>
 
