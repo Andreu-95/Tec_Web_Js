@@ -182,14 +182,26 @@
         
         var num1 = prompt('Ingrese el primer número');
         var num2 = prompt('Ingrese el segundo número');
-        var num3 = prompt('Ingrese el tercer número');
+        /*var num3 = prompt('Ingrese el tercer número');
         
         function multiplicarTres(n1, n2, n3)
         {
             return n1 * n2 * n3;
         }
         
-        console.log(multiplicarTres(num1, num2, num3));
+        console.log(multiplicarTres(num1, num2, num3));*/
+        
+        function maxOf2(n1, n2)
+        {
+            if(n1 > n2)
+                return n1;
+            else if(n2 > n1)
+                return n2;
+            else if(n1 === n2)
+                return n1;
+        }
+        
+        console.log(maxOf2(num1, num2));
     </script>
 </head>
 
