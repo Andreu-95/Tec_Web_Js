@@ -218,12 +218,27 @@
         
         console.log(feedPerRanger(4, 2));*/
         
-        var movie1 = [16, 'Candles'];
+        /*var movie1 = [16, 'Candles'];
         var movie2 = [3, 'Men', 'and', 'a', 'Baby'];
         var eightiesMovies = [movie1, movie2];
         
         var infant = eightiesMovies[1][4];
-        console.log(infant);
+        console.log(infant);*/
+        
+        function numStrings(list)
+        {
+            var count = 0;
+            
+            for(var i = 0; i < list.length; i++)
+            {
+                if(typeof list[i] === 'string')
+                    count++;
+            }
+            
+            return count;
+        }
+        
+        console.log(numStrings([1, '2', 3, '4', 5, 'seis']));
     </script>
 </head>
 
