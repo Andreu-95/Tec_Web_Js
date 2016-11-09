@@ -292,7 +292,7 @@
         console.log(puzzlers[2](5));
         console.log(puzzlers[3](5));*/
         
-        function varAdventureSelector(userChoice)
+        /*function varAdventureSelector(userChoice)
         {
             if(userChoice === 1)
             {
@@ -319,7 +319,26 @@
         
         console.log(varAdventureSelector(1)());
         console.log(varAdventureSelector(2)());
-        console.log(varAdventureSelector(3)());
+        console.log(varAdventureSelector(3)());*/
+        
+        var puzzlers = [
+            function(a) { return 8 * a - 10; },
+            function(a) { return (a - 3) * (a - 3) * (a - 3); },
+            function(a) { return a * a + 4; },
+            function(a) { return a % 5;}
+        ];
+        
+        var start = 2;
+        
+        var applyAndEmpty = function(input, queue)
+        {
+            for(var i = 0; i < queue.length; i++)
+                input = queue[i](input);
+            
+            return input;
+        }
+        
+        alert(applyAndEmpty(start, puzzlers));
     </script>
 </head>
 
