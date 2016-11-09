@@ -252,7 +252,7 @@
         }
         nombre();*/
         
-        var passengers = [ ['Thomas', 'Meeks'],
+        /*var passengers = [ ['Thomas', 'Meeks'],
                            ['Gregg', 'Pollack'],
                            ['Christine', 'Wong'],
                            ['Dan', 'McGaw'] ];
@@ -267,7 +267,59 @@
         modifiedNames.map(function(nombre)
         {
             alert('Yo, ' + nombre);
-        });
+        });*/
+        
+        /*var puzzlers = [ function(input)
+                        {
+                            return ((3 * input) - 8);    
+                        },
+                        function(input)
+                        {
+                            return (Math.pow((input + 2), 3));    
+                        },
+                        function(input)
+                        {
+                            return (Math.pow(input, 2) - 9);    
+                        },
+                        function(input)
+                        {
+                            return (input % 4);
+                        }
+                       ];
+        
+        console.log(puzzlers[0](5));
+        console.log(puzzlers[1](5));
+        console.log(puzzlers[2](5));
+        console.log(puzzlers[3](5));*/
+        
+        function varAdventureSelector(userChoice)
+        {
+            if(userChoice === 1)
+            {
+                return function()
+                {
+                    alert('You selected the Vines of Doom!');
+                }
+            }
+            else if(userChoice === 2)
+            {
+                return function()
+                {
+                    alert('Looks like you want the Lake of Despair!');
+                }
+            }
+            else if(userChoice === 3)
+            {
+                return function()
+                {
+                    alert('The Caves of Catastrophe!');
+                }
+            }
+        }
+        
+        console.log(varAdventureSelector(1)());
+        console.log(varAdventureSelector(2)());
+        console.log(varAdventureSelector(3)());
     </script>
 </head>
 
