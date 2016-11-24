@@ -1,4 +1,10 @@
-var num1 = 5;
-var num2 = 3;
+module.exports = {
+    imprimirSuma: imprimirSuma(),
+}
 
-console.log(num1 + num2);
+function imprimirSuma() {
+    var num1 = 5;
+    var num2 = 3;
+
+    console.log(num1 + num2);
+}
