@@ -1,5 +1,5 @@
 module.exports = {
-    imprimirSuma: imprimirSuma,
+    imprimirSuma: imprimirSuma(),
 }
 
 function imprimirSuma() {
