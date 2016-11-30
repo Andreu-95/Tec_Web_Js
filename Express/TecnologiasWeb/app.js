@@ -14,6 +14,10 @@ app.post('/TecnologiasWeb', function (req, res) {
         cedula: '1723123459'
     };
     
+    usuario.apellido = '';
+    usuario.mascotas = [];
+    usuario.casado = false;
+    
     //res.send('Con Post!');
     res.json(usuario);
 });
