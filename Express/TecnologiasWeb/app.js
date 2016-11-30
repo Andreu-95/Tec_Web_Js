@@ -6,29 +6,27 @@ var usuarios = [
         id: 1,
         nombre: 'Juan',
         cedula: '1738292839'
-        },
+    },
     {
         id: 2,
         nombre: 'Pepe',
         cedula: '1748392948'
-        },
+    },
     {
         id: 3,
         nombre: 'Luis',
         cedula: '1728392838'
-        }
-    ];
+    }
+];
 
 app.get('/Usuarios/:id', function (req, res) {
     var idActual = req.params.id;
     for (var i = 0; i < usuarios.length; i++) {
         if (idActual == usuarios[i].id) {
             res.json(usuarios[i]);
-            break;
-        } else {
-            res.send('Usuario no encontrado');
-        }
+        } 
     }
+    res.send('Usuario no encontrado');
 });
 
 app.get('/Usuarios', function (req, res) {
