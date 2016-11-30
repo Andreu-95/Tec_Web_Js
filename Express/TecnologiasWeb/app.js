@@ -32,6 +32,10 @@ app.get('/Usuarios/:id', function (req, res) {
     }
 });
 
+app.get('/Usuarios', function (req, res) {
+   res.json(usuarios); 
+});
+
 app.get('/TecnologiasWeb', function (req, res) {
     res.send('Con Get!');
 });
