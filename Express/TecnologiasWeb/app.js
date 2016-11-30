@@ -21,7 +21,7 @@ var usuarios = [
 
 app.get('/Usuarios/:id', function (req, res) {
    var idActual = req.params.id;
-    for(var i = 0; i < usuarios.length; i++) {
+    for (var i = 0; i < usuarios.length; i++) {
         if (idActual == usuarios[i].id) {
             res.json(usuarios[i]);
             break;
