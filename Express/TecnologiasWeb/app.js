@@ -6,6 +6,9 @@ app.get('/TecnologiasWeb', function (req, res) {
 })
 
 app.post('/TecnologiasWeb', function(req, res) {
+    console.log('Lo que tengo en Request es: ');
+    console.log(req);
+    
     res.send('Con Post!');
 })
 
