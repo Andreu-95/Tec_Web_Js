@@ -44,8 +44,17 @@ app.post('/Usuarios', function (req, res) {
     
     if (!req.query.nombre)
         res.send('No puso nombre');
-    if (!req.query.cedula)
+    else if (!req.query.cedula)
         res.send('No puso cédula');
+    else {
+        var nuevoUsuario = {
+            id: usuarios.length + 1,
+            nombre: req.query.nombre,
+            cedula: req.query.cedula
+        };
+        usuarios.push(nuevoUsuario);
+        res.json(nuevoUsuario);
+    }
 });
 
 app.get('/TecnologiasWeb', function (req, res) {
