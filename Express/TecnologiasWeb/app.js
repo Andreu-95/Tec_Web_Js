@@ -7,7 +7,7 @@ app.get('/TecnologiasWeb', function (req, res) {
 
 app.post('/TecnologiasWeb', function (req, res) {
     console.log('Lo que tengo en Request es: ');
-    console.log(req);
+    console.log(req.header);
     
     var usuario = {
         nombre: 'Andrés',
@@ -17,6 +17,8 @@ app.post('/TecnologiasWeb', function (req, res) {
     usuario.apellido = '';
     usuario.mascotas = [];
     usuario.casado = false;
+    
+    res.append('token', '1234');
     
     //res.send('Con Post!');
     res.json(usuario);
