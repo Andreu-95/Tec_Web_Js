@@ -1,9 +1,9 @@
 var express = require('express');
 var fs = require('fs');
 
-/*var app = express();
+var app = express();
 
-var usuarios = [
+/*var usuarios = [
     {
         id: 1,
         nombre: 'Juan',
@@ -73,25 +73,45 @@ app.post('/TecnologiasWeb', function (req, res) {
         cedula: '1723123459'
     };*/
 
-    /*usuario.apellido = '';
-    usuario.mascotas = [];
-    usuario.casado = false;*/
+/*usuario.apellido = '';
+usuario.mascotas = [];
+usuario.casado = false;*/
 
-    //res.append('token', '1234');
+//res.append('token', '1234');
 
-    //res.send('Con Post!');
-    //res.json(usuario);
+//res.send('Con Post!');
+//res.json(usuario);
 //});
 
 /*app.put('/TecnologiasWeb', function (req, res) {
     res.send('Con Put!');
+})*/
+
+app.get('/', function (req, res) {
+    var arch = '';
+
+    console.log('Antes de leer');
+    fs.readFile('./paginas/pagina.html', 'utf8', function (error, archivo) {
+        //console.log(error);
+        //console.log(archivo);
+        arch += archivo;
+        fs.readFile('./paginas/usuario.html', 'utf8', function (error, archivo) {
+            arch += archivo;
+            fs.readFile('./paginas/footer.html', 'utf8', function (error, archivo) {
+                arch += archivo;
+                res.send(arch);
+            })
+        })
+    });
+
+    console.log('Archivo terminado');
 })
 
 app.listen(5050, function () {
     console.log('Example app!');
-});*/
+});
 
-var quePasa = '';
+/*var quePasa = '';
 quePasa = 'Está por leer el archivo';
 console.log(quePasa);
 
@@ -101,4 +121,4 @@ fs.readFile('./paginas/pagina.html', 'utf8', function (error, archivo) {
 });
 
 quePasa = 'Terminó de leer el archivo';
-console.log(quePasa);
+console.log(quePasa);*/
