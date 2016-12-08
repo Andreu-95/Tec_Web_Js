@@ -91,7 +91,14 @@ app.listen(5050, function () {
     console.log('Example app!');
 });*/
 
+var quePasa = '';
+quePasa = 'Está por leer el archivo';
+console.log(quePasa);
+
 fs.readFile('./paginas/pagina.html', 'utf8', function (error, archivo) {
     console.log(error);
     console.log(archivo);
 });
+
+quePasa = 'Terminó de leer el archivo';
+console.log(quePasa);
