@@ -1,5 +1,7 @@
 var express = require('express');
-var app = express();
+var fs = require('fs');
+
+/*var app = express();
 
 var usuarios = [
     {
@@ -24,7 +26,7 @@ app.get('/Usuarios/:id', function (req, res) {
     for (var i = 0; i < usuarios.length; i++) {
         if (idActual == usuarios[i].id) {
             res.json(usuarios[i]);
-        } 
+        }
     }
     res.send('Usuario no encontrado');
 });
@@ -39,7 +41,7 @@ app.get('/Usuarios', function (req, res) {
 app.post('/Usuarios', function (req, res) {
     console.log(req.query.nombre);
     console.log(req.query.cedula);
-    
+
     if (!req.query.nombre)
         res.send('No puso nombre');
     else if (!req.query.cedula)
@@ -75,16 +77,21 @@ app.post('/TecnologiasWeb', function (req, res) {
     usuario.mascotas = [];
     usuario.casado = false;*/
 
-    res.append('token', '1234');
+    //res.append('token', '1234');
 
     //res.send('Con Post!');
     //res.json(usuario);
-});
+//});
 
-app.put('/TecnologiasWeb', function (req, res) {
+/*app.put('/TecnologiasWeb', function (req, res) {
     res.send('Con Put!');
 })
 
 app.listen(5050, function () {
     console.log('Example app!');
+});*/
+
+fs.readFile('./paginas/pagina.html', 'utf8', function (error, archivo) {
+    console.log(error);
+    console.log(archivo);
 });
