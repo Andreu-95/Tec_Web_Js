@@ -150,3 +150,13 @@ console.log(calculadora.imprimirSuma());
 </p>
 <br>
 <a href="#Cabecera">Cabecera</a>
+
+<a name="ConRec"></a>
+## Conclusiones y Recomendaciones
+- NPM nos facilita el reutilizar código para JavaScript, lo cual es útil ya que nos ahorra tiempo al momento de programar permitiéndonos usar funciones que ya fueron creadas, en lugar de estar creándolos nosotros mismos otra vez.
+- Con NPM podemos generar nuestros propios paquetes para usarlos a futuro nosotros mismos, y al mismo tiempo compartirlo con el resto de personas que pudieran encontrarlo útil y adecuado a sus necesidades.
+- Se recomienda en lo posible reutilizar código ya que es una buena práctica de programación.
+- Se recomienda tener en cuenta como se exportan las funciones para el paquete npm, es importante que estas estén escritas de la manera correcta, caso contrario no funcionará.
+
+<br>
+<a href="#Cabecera">Cabecera</a>
