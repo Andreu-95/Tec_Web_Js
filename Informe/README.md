@@ -121,3 +121,32 @@ function imprimirSuma() {
 <br>
 <a href="#Cabecera">Cabecera</a>
 
+<a name="Descargar"></a>
+### Descargar e Instalar Paquete NPM.
+- Para instalar un paquete utilizamos el comando `npm install` e indicamos el nombre del paquete que queremos instalar.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/07-Node/Informe/images/npm7.png">
+</p>
+
+- Para comprobar la instalación, observamos que dentro de la carpeta aparezca otra con el nombre de "node_modules". Dentro de esta estará el paquete que nosotros creamos.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/07-Node/Informe/images/npm8.png">
+</p>
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<a name="Probar"></a>
+### Probar Paquete Descargado.
+- Para usar las funciones del paquete que descargamos, lo cargamos dentro del programa que va a utilizarlo de la siguiente manera:
+```javascript
+var calculadora = require("pruebatw");
+
+console.log(calculadora.imprimirSuma());
+```
+
+- Para probarlo, podemos ejecutar el script de la consola con el comando `node` seguido del nombre del archivo, y vemos que si funciona.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/07-Node/Informe/images/npm9.png">
+</p>
+<br>
+<a href="#Cabecera">Cabecera</a>
