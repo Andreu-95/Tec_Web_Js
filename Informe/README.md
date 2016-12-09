@@ -17,6 +17,7 @@
     * <a href="#Instalar">Instalar NodeJS</a>
     * <a href="#Crear">Crear un Módulo NodeJS</a>
     * <a href="#Publicar">Publicar Paquete NPM</a>
+    * <a href="#Actualizar">Actualizar Paquete NPM</a>
     * <a href="#Descargar">Descargar e Instalar Paquete NPM</a>
     * <a href="#Probar">Probar Paquete Descargado</a>
 - <a href="#ConRec">Conclusiones y Recomendaciones</a>
@@ -70,3 +71,24 @@ var num2 = 3;
 
 console.log(num1 + num2);
 ```
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<a name="Publicar"></a>
+### Publicar Paquete NPM.
+- Para publicar nuestro paquete lo que primero haremos es configurar nuestro usuario. En este caso ya lo hemos creado, así que utilizaremos el comando `npm login`.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/07-Node/Informe/images/npm2.png">
+</p>
+
+- Para publicar nuestro paquete, utilizamos el comando `npm publish`.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/07-Node/Informe/images/npm3.png">
+</p>
+
+- Efectivamente, podemos observar que el paquete ha sido publicado.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/07-Node/Informe/images/npm4.png">
+</p>
+<br>
+<a href="#Cabecera">Cabecera</a>
