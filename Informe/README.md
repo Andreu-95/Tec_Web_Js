@@ -13,6 +13,7 @@
 - <a href="#Objetivos">Objetivos</a>
 - <a href="#MarcoTeorico">Marco Teórico</a>
     * <a href="#NPM">NPM</a>
+    * <a href="#Node">NodeJS</a>
 - <a href="#Desarrollo">Desarrollo de la Práctica</a>
     * <a href="#Instalar">Instalar NodeJS</a>
     * <a href="#Crear">Crear un Módulo NodeJS</a>
@@ -43,6 +44,14 @@ El código reutilizable se conoce como paquete o módulo. Estos generalmente est
 La idea de esto, es que los paquetes resuelven un solo problema y lo resuelven bien. Por ello, al juntar varios de estos paquetes se puede crear una solución más completo. Todo a partir de la reutilización.
 <br>
 (Fuente: [NPM](https://docs.npmjs.com/getting-started/what-is-npm)).
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<a name="Node"></a>
+### NodeJS
+Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor que está basado en el lenguaje de programación ECMAScript. Además es asíncrono, con Entrada y Salida de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google. Se lo diseñó para ayudar en la creación de redes altamente escalables.
+<br>
+(Fuente: [Wikipedia](https://es.wikipedia.org/wiki/Node.js)).
 <br>
 <a href="#Cabecera">Cabecera</a>
 
