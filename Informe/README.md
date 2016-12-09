@@ -92,3 +92,32 @@ console.log(num1 + num2);
 </p>
 <br>
 <a href="#Cabecera">Cabecera</a>
+
+<a name="Actualizar"></a>
+### Actualizar Paquete NPM.
+- Vamos a actualizar el código de nuestra aplicación a lo siguiente:
+```javascript
+module.exports = {
+    imprimirSuma: imprimirSuma,
+}
+
+function imprimirSuma() {
+    var num1 = 5;
+    var num2 = 3;
+
+    console.log(num1 + num2);
+}
+```
+
+- Ahora, para actualizar nuestro paquete, utilizamos el comando `npm version patch`, con esto actualizamos la versión. Luego, hacemos nuevamente `npm publish`.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/07-Node/Informe/images/npm5.png">
+</p>
+
+- Comprobamos que el paquete se actualizó a la siguiente versión.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/07-Node/Informe/images/npm6.png">
+</p>
+<br>
+<a href="#Cabecera">Cabecera</a>
+
