@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+  <div class="off-canvas-wrap docs-wrap" data-offcanvas>
+    <div class="inner-wrap">
+      <nav class="tab-bar">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+        </section>
+
+        <section class="right tab-bar-section">
+          <h1 class="title">Proyecto ECMAScript</h1>
+        </section>
+
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li>
+            <label>ECMAScript</label>
+          </li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="varletconst.html">Variables: var vs let vs const</a></li>
+          <li><a href="iifes.html">IIFEs ahora Blocks</a></li>
+          <li><a href="arrow.html">Arrow Functions</a></li>
+          <li><a href="strings.html">Strings</a></li>
+          <li><a href="literals.html">Template literals</a></li>
+          <li><a href="arrays.html">Destructuring arrays</a></li>
+          <li><a href="objects.html">Destructuring objects</a></li>
+          <li><a href="modules.html">Modules export and import</a></li>
+          <li><a href="parameters.html">Default Parameters, Rest Parameters, Named Parameters</a></li>
+          <li><a href="#">Spread Operator</a></li>
+          <li><a href="#">Classes</a></li>
+          <li><a href="#">Promises</a></li>
+          <li><a href="#">Getter and Setter in Classes</a></li>
+        </ul>
+      </aside>
+
+      <section class="main-section">
+        <div class="row">
+          <div class="large-12 columns">
+            <br/>
+            <h2 class="text-center">ECMAScript  2015</h2>
+            <h5 class="subheader text-center">Patricio Chávez - Andrés Guerra</h5>
+
+            <br>
+            <h3>Modules export and import</h3>
+            <h4 class="subheader">Características</h4>
+
+            <p class="text-justify">
+              Antes de ES6, se usaba librerías como Browserify para crear módulos en el lado del
+              cliente, y require con Node.js. Con ES6, podemos usarlos directamente.
+            </p>
+            
+            <h5>Exportar módulos</h5>
+            
+            <pre>
+              <div class="code-container panel">
+module.exports = 1;
+module.exports = { foo: 'bar' };
+module.exports = ['foo', 'bar'];
+module.exports = function bar () {};
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              Con ES6 podemos exportar con nombre.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+export let name = 'David';
+export let age  = 25;
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              También se puede exportar una lista de objetos.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+function sumTwo(a, b) {
+    return a + b;
+}
+
+function sumThree(a, b, c) {
+    return a + b + c;
+}
+
+export { sumTwo, sumThree };
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              También se pueden exportar funciones, objetos y valores con la palabra <code>export</code>.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+export function sumTwo(a, b) {
+    return a + b;
+}
+
+export function sumThree(a, b, c) {
+    return a + b + c;
+}
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              También se pueden exportar bindings por defecto.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+function sumTwo(a, b) {
+    return a + b;
+}
+
+function sumThree(a, b, c) {
+    return a + b + c;
+}
+
+let api = {
+    sumTwo,
+    sumThree
+};
+
+export default api;
+
+/* Which is the same as
+ * export { api as default };
+ */
+              </div>
+            </pre>
+            
+            <h5>Importar módulos</h5>
+            
+            <p class="text-justify">
+              Se puede importar un archivo entero.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+import 'underscore';
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              Como en Python, tenemos importaciones con nombre.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+import {
+    sumTwo as addTwoNumbers,
+    sumThree as sumThreeNumbers
+} from 'math/addition';
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              También podemos importar todas las cosas.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+import * as util from 'math/addition';
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              También podemos importar una lista de valores del módulo.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+import * as additionUtil from 'math/addition';
+const { sumTwo, sumThree } = additionUtil;
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              También podemos importar bindings por defecto.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+import api from 'math/addition';
+// Same as: import { default as api } from 'math/addition';
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              Es posible combinar exportaciones e importaciones por defecto de ser necesario.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+// foos.js
+export { foo as default, foo1, foo2 };
+
+import foo, { foo1, foo2 } from 'foos';
+              </div>
+            </pre>
+            
+            <p class="text-justify">
+              Cuando importamos un módulo exportado con commonjs podemos usar:
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+import React from 'react';
+const { Component, PropTypes } = React;
+
+import React, { Component, PropTypes } from 'react';
+              </div>
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <a class="exit-off-canvas"></a>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/fastclick.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+
+</html>

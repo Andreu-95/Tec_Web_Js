@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+  <div class="off-canvas-wrap docs-wrap" data-offcanvas>
+    <div class="inner-wrap">
+      <nav class="tab-bar">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+        </section>
+
+        <section class="right tab-bar-section">
+          <h1 class="title">Proyecto ECMAScript</h1>
+        </section>
+
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li>
+            <label>ECMAScript</label>
+          </li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="varletconst.html">Variables: var vs let vs const</a></li>
+          <li><a href="iifes.html">IIFEs ahora Blocks</a></li>
+          <li><a href="arrow.html">Arrow Functions</a></li>
+          <li><a href="strings.html">Strings</a></li>
+          <li><a href="literals.html">Template literals</a></li>
+          <li><a href="arrays.html">Destructuring arrays</a></li>
+          <li><a href="objects.html">Destructuring objects</a></li>
+          <li><a href="modules.html">Modules export and import</a></li>
+          <li><a href="parameters.html">Default Parameters, Rest Parameters, Named Parameters</a></li>
+          <li><a href="#">Spread Operator</a></li>
+          <li><a href="#">Classes</a></li>
+          <li><a href="#">Promises</a></li>
+          <li><a href="#">Getter and Setter in Classes</a></li>
+        </ul>
+      </aside>
+
+      <section class="main-section">
+        <div class="row">
+          <div class="large-12 columns">
+            <br/>
+            <h2 class="text-center">ECMAScript  2015</h2>
+            <h5 class="subheader text-center">Patricio Chávez - Andrés Guerra</h5>
+
+            <br>
+            <h3>Arrow Functions</h3>
+            <h4 class="subheader">Características</h4>
+
+            <p class="text-justify">
+              Usualmente tenemos funciones anidadas donde quisieramos conservar el contexto de <code>this</code> de su alcance léxico. Por ejemplo:
+            </p>
+
+            <pre>
+              <div class="code-container panel">
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.prefixName = function (arr) {
+    return arr.map(function (character) {
+        return this.name + character; // Cannot read property 'name' of undefined
+    });
+};
+              </div>
+            </pre>
+
+            <p class="text-justify">
+              Una solución común a esto es guardar el contexto de <code>this</code> en una variable.
+            </p>
+
+            <pre>
+              <div class="code-container panel">
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.prefixName = function (arr) {
+    var that = this; // Store the context of this
+    return arr.map(function (character) {
+        return that.name + character;
+    });
+};
+              </div>
+            </pre>
+
+            <p class="text-justify">
+              También podemos pasar como tal el contexto de <code>this</code>.
+            </p>
+
+            <pre>
+              <div class="code-container panel">
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.prefixName = function (arr) {
+    return arr.map(function (character) {
+        return this.name + character;
+    }, this);
+};
+              </div>
+            </pre>
+
+            <p class="text-justify">
+              También podemos enlazar el contexto.
+            </p>
+
+            <pre>
+              <div class="code-container panel">
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.prefixName = function (arr) {
+    return arr.map(function (character) {
+        return this.name + character;
+    }.bind(this));
+};
+              </div>
+            </pre>
+
+            <p class="text-justify">
+              Con las funciones flecha el contexto de <code>this</code> no es ocultado y podemos escribir las funciones así:
+            </p>
+
+            <pre>
+              <div class="code-container panel">
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.prefixName = function (arr) {
+    return arr.map(character => this.name + character);
+};
+              </div>
+            </pre>
+
+            <p class="text-justify">
+              Las funciones flecha son más concisas cuando se usan en expresiones de funciones que simplemente retornan un valor.
+            </p>
+            
+            <pre>
+              <div class="code-container panel">
+var squares = arr.map(function (x) { return x * x }); // Function Expression
+              </div>
+            </pre>
+            
+            <pre>
+              <div class="code-container panel">
+const arr = [1, 2, 3, 4, 5];
+const squares = arr.map(x => x * x); // Arrow Function for terser implementation
+              </div>
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <a class="exit-off-canvas"></a>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/fastclick.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+
+</html>
