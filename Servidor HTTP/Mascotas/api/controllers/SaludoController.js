@@ -6,30 +6,27 @@
  */
 
 module.exports = {
-	hola: function (req, res) {
+    hola: function (req, res) {
         if (req.method === 'GET') {
             res.json({
                 nombre: 'hola get'
             });
-        }
-        else if (req.method === 'POST') {
+        } else if (req.method === 'POST') {
             res.json({
                 nombre: 'hola post'
             });
-        }
-        else {
+        } else {
             res.json({
                 nombre: 'hola todos'
             });
         }
     },
-    
+
     adios: function (req, res) {
         res.send('Adios');
     },
-    
+
     hora: function (req, res) {
         res.send('Hora');
     }
 };
-
