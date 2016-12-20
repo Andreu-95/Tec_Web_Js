@@ -30,3 +30,6 @@ module.exports = {
         res.send('Hora');
     }
 };
+
+// var parametros = req.allParams();
+// para: parametros
