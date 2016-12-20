@@ -24,3 +24,7 @@ Servidor Web
 Se encuentra en la carpeta assets
 
 Crear carpeta app: index.html, estilos.css, script.js
+
+### Vistas
+
+Modificar ejs
