@@ -28,3 +28,7 @@ Crear carpeta app: index.html, estilos.css, script.js
 ### Vistas
 
 Modificar ejs
+
+### Generar controladores
+
+sails generate controller nombreControlador
