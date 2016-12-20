@@ -33,3 +33,5 @@ module.exports = {
 
 // var parametros = req.allParams();
 // para: parametros
+
+// var nodemailer = require(nodemailer);
