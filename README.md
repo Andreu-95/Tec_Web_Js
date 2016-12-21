@@ -32,3 +32,7 @@ Modificar ejs
 ### Generar controladores
 
 sails generate controller nombreControlador
+
+### Generar api
+
+sails generate api nombreApi
