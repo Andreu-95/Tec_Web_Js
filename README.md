@@ -1,6 +1,7 @@
 ### Instalación
 
 npm install -g sails
+npm install --save nodemailer
 
 ### Crear proyecto
 
