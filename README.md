@@ -36,3 +36,7 @@ sails generate controller nombreControlador
 ### Generar api
 
 sails generate api nombreApi
+
+### Generar modelo
+
+sails generate model nombreModelo
