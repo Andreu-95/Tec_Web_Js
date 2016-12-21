@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+
+<head>
+    <title>
+        <%=typeof title == 'undefined' ? 'New Sails App' : title%>
+    </title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -30,19 +33,27 @@
 
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/estilos2.css">
+    <style>
+        .rojo {
+            background-color: red;
+        }
+    </style>
     <!--STYLES END-->
-  </head>
+</head>
 
-  <body>
-   <h1>Hola</h1>
-   <h2>Aquí comienza el homepage</h2>
+<body>
+    <div class="rojo">
+        <h1>Hola</h1>
+        <h2>Aquí comienza el homepage</h2>
+    </div>
+
     <%- body %>
     <h2>Aquí termina el homepage</h2>
     <h1>Adios</h1>
 
 
 
-    <!--
+        <!--
         Client-side Templates
         ========================
 
@@ -63,12 +74,12 @@
               stringfile before they're served.
     -->
 
-    <!--TEMPLATES-->
-    
-    <!--TEMPLATES END-->
+        <!--TEMPLATES-->
+
+        <!--TEMPLATES END-->
 
 
-    <!--
+        <!--
 
       Client-side Javascript
       ========================
@@ -91,9 +102,10 @@
 
     -->
 
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/app/script.js"></script>
-    <!--SCRIPTS END-->
-  </body>
+        <!--SCRIPTS-->
+        <script src="/js/dependencies/sails.io.js"></script>
+        <script src="/app/script.js"></script>
+        <!--SCRIPTS END-->
+</body>
+
 </html>
