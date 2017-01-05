@@ -1,7 +1,7 @@
-# SAILS
+# Sails
 
 ### Materia: `Tecnologías Web con Javascript`
-### Tema: `SAILS`
+### Tema: `Sails`
 ### Fecha: `2017-01-05`
 ### Estudiante: `Andrés David Guerra Vásconez`
 ### Profesor: `Adrián Eguez`
@@ -12,7 +12,7 @@
 - <a href="#Tema">Tema</a>
 - <a href="#Objetivos">Objetivos</a>
 - <a href="#MarcoTeorico">Marco Teórico</a>
-    * <a href="#SAILS">SAILS</a>
+    * <a href="#Sails">Sails</a>
     * <a href="#Assets">Assets</a>
     * <a href="#Vistas">Vistas</a>
     * <a href="#Rutas">Rutas</a>
@@ -32,14 +32,14 @@ Tema de la Práctica: `SAILS.`
 
 <a name="Objetivos"></a>
 ## Objetivos
-- Aprender como instalar y utilizar SAILS para la creación de proyectos web.
-- Aprender los conceptos básicos de cada una de las partes que conforman un proyecto de SAILS.
-- Entender como funciona el modelo vista controlador y como hace uso SAILS del mismo.
+- Aprender como instalar y utilizar Sails para la creación de proyectos web.
+- Aprender los conceptos básicos de cada una de las partes que conforman un proyecto de Sails.
+- Entender como funciona el modelo vista controlador y como hace uso Sails del mismo.
 
 <a name="MarcoTeorico"></a>
 ## Marco Teórico
-<a name="SAILS"></a>
-### SAILS
+<a name="Sails"></a>
+### Sails
 Sails es un framework web. Sin embargo no es un framework hecho para la parte frontal de una página Web, es decir, todo lo que se refiere a estándares como HTML5 o CSS3, estos tienen frameworks como Backbones, Angular, JQuery y demás. Si bien Sails trabaja bien con estos frameworks, no significa que pueda reemplazarlos.
 <br>
 Por otro lado, Sails es un framework que trabaja con la funcionalidad que ocurre por detrás de un sitio web, es decir, se aplican conceptos como REST, HTTP, WebSockets y la implementación de tecnologías como Java, Ruby, Node.js y demás. Por ello, Sails ayuda a que construyamos APIs, utilizar archivos HTML y manejar varios de usuarios.
@@ -113,3 +113,20 @@ Este es un arreglo de archivos HTML que serán compilados en una función jst y 
 
 <a name="Desarrollo"></a>
 ## Desarrollo de la Práctica
+<a name="Instalacion"></a>
+### Instalación Sails
+Para instalar Sails en nuestro computador de manera global, lo hacemos con npm utilizando el siguiente comando.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails1.png">
+</p>
+
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<br>
+<a name="Proyecto"></a>
+### Crear Proyecto Sails
+Para crear un proyecto en Sails, ejecutamos el siguiente comando en la carpeta donde queremos guardarlo.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails2.png">
+</p>
