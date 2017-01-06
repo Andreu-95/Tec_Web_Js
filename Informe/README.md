@@ -22,8 +22,6 @@
     * <a href="#Instalacion">Instalación Sails</a>
     * <a href="#Proyecto">Crear Proyecto Sails</a>
     * <a href="#Controlador">Crear Controlador para el Proyecto</a>
-    * <a href="#API">Crear API para el Proyecto</a>
-    * <a href="#Modelo">Crear Modelo para el Proyecto</a>
 - <a href="#ConRec">Conclusiones y Recomendaciones</a>
     
 <a name="Tema"></a>
@@ -130,3 +128,316 @@ Para crear un proyecto en Sails, ejecutamos el siguiente comando en la carpeta d
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails2.png">
 </p>
+
+<br>
+Ahora que ya está creado, dentro de la carpeta assets vamos a colocar un html, un css y un script de ejemplo para ver como los procesa Sails.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba Sails</title>
+    
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+```
+```css
+body {
+    background-color: deepskyblue;
+    color: crimson;
+}
+```
+```javascript
+alert('No se deben usar alertas');
+```
+
+<br>
+Para probar nuestra página, primero necesitamos levantar el servidor con el siguiente comando. Es necesario asegurarnos de que estamos en la carpeta del proyecto.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails3.png">
+</p>
+
+<br>
+Ahora, podemos ver nuestra página web en la dirección y puerto que tiene Sails e indicando la carpeta en donde se encuentra.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails4.png" width="1000">
+</p>
+
+<br>
+Ahora, vamos a añadir una imagen nuestra página web, esta debe estar en la misma carpeta que el resto. Así, después de volver a levantar el servidor, observamos como efectivamente si muestra la imagen.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba Sails</title>
+    
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    
+    <img src="zeus.jpg" alt="Zeus">
+    
+    <script src="script.js"></script>
+</body>
+</html>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails5.png" width="1000">
+</p>
+
+<br>
+Ahora, para usar nuestros estilos en todas las páginas, debemos colocarlos en la carpeta `assets/styles/`.
+```css
+body {
+    background-color: greenyellow;
+    color: crimson;
+}
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails6.png" width="1000">
+</p>
+
+<br>
+Si queremos cargar un archivo css en específico, debemos especificar cual en el archivo `pipeline.js`.
+```css
+body {
+    background-color: firebrick;
+    color: white;
+}
+```
+```javascript
+// CSS files to inject in order
+//
+// (if you're using LESS with the built-in default config, you'll want
+//  to change `assets/styles/importer.less` instead.)
+var cssFilesToInject = [
+  // 'styles/**/*.css'
+    'styles/estilos2.css'
+];
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails7.png" width="1000">
+</p>
+
+<br>
+También podemos hacer los mismo con los scripts, así mismo, debemos modificar el archivo `pipeline.js`.
+```javascript
+// Client-side javascript files to inject in order
+// (uses Grunt-style wildcard/glob/splat expressions)
+var jsFilesToInject = [
+
+  // Load sails.io before everything else
+  'js/dependencies/sails.io.js',
+
+  // Dependencies like jQuery, or Angular are brought in here
+  'js/dependencies/**/*.js',
+  'app/script.js',
+
+  // All of the rest of your client-side js files
+  // will be injected here in no particular order.
+  'js/**/*.js'
+];
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails8.png" width="1000">
+</p>
+
+<br>
+El archivo que se despliega en el servidor es `layout.ejs`. Tiene una etiqueta especial `<%- body %>`, en esta se carga todo el cuerpo de la página. Sin embargo, podemos añadir etiquetas aquí directamente.
+```html
+<h1>Hola</h1>
+<h2>Aquí comienza el homepage</h2>
+<%- body %>
+<h2>Aquí termina el homepage</h2>
+<h1>Adiós</h1> 
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails9.png" width="1000">
+</p>
+
+<br>
+Así mismo, en este archivo podemos cargar estilos directamente.
+```css
+<style>
+    .morado {
+        background-color: purple;
+    }
+</style>
+```
+```html
+<div class="morado">
+    <h1>Hola</h1>
+    <h2>Aquí comienza el homepage</h2>
+</div>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails10.png" width="1000">
+</p>
+
+<br>
+Como vimos, Sails maneja vistas y no páginas directamente. Por ello en la URL no se muestra un archivo html. También podemos crear nuestras propias vistas y dentro del archivo `routes.js` indicamos mediante que URL serán cargadas estas vistas.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuenca</title>
+</head>
+<body>
+    <h1>Cuenca</h1>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guayaquil</title>
+</head>
+<body>
+    <h1>Guayaquil</h1>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quito</title>
+</head>
+<body>
+    <h1>Quito</h1>
+</body>
+</html>
+```
+```javascript
+// routes.js
+
+'/Quito': {
+      view: 'quito'
+  },
+    
+  '/Guayaquil': {
+      view: 'guayaquil'
+  },
+    
+  '/Cuenca': {
+      view: 'cuenca'
+  }
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails11.png" width="1000">
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails12.png" width="1000">
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails13.png" width="1000">
+</p>
+
+<br>
+Para hacer un mejor traslado entre las vistas desde la vista de la página principal, podemos añadir un menú al archivo `layout.ejs`.
+```html
+<ul>
+    <li><a href="/Cuenca">Cuenca</a></li>
+    <li><a href="/Guayaquil">Guayaquil</a></li>
+    <li><a href="/Quito">Quito</a></li>
+    <li><a href="/">Home</a></li>
+</ul>
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails14.png" width="1000">
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails15.png" width="1000">
+</p>
+
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<br>
+<a name="Controlador"></a>
+### Crear Controlador para el Proyecto
+Primero, para crear un controlador para el proyecto utilizamos el siguiente comando.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails16.png">
+</p>
+
+<br>
+Ahora, con el controlador creado vamos a colocarle una funcionalidad básica.
+```javascript
+module.exports = {
+	hola: function (req, res) {
+        res.send('Hola');
+    },
+    
+    adios: function (req, res) {
+        res.send('Adiós');
+    },
+    
+    hora: function (req, res) {
+        res.send('Hora');
+    }
+};
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails17.png" width="1000">
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails18.png" width="1000">
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails19.png" width="1000">
+</p>
+
+<br>
+Podemos indicar a nuestro controlador que respuesta debe enviar, dependiendo del método HTTP con que se haga la petición.
+```javascript
+module.exports = {
+	hola: function (req, res) {
+        if (req.method === 'GET') {
+            res.json({
+                nombre: 'hola get'
+            });
+        } else if (req.method === 'POST') {
+            res.json({
+                nombre: 'hola post'
+            });
+        } else {
+            res.json({
+                nombre: 'hola todos'
+            });
+        }
+    },
+    
+    adios: function (req, res) {
+        res.send('Adiós');
+    },
+    
+    hora: function (req, res) {
+        res.send('Hora');
+    }
+};
+```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails20.png">
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails21.png">
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails22.png">
+</p>
+
+<br>
+<a href="#Cabecera">Cabecera</a>
