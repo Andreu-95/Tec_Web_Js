@@ -47,7 +47,7 @@ Por otro lado, Sails es un framework que trabaja con la funcionalidad que ocurre
 <br>
 <a href="#Cabecera">Cabecera</a>
 
-<br>
+
 <a name="Assets"></a>
 ### Assets
 Los Assets hacen referencia a los archivos estáticos, por ejemplo js, css, imágenes y demás de nuestro servidor que nosotros queremos hacerlas asequibles al resto del mundo. En Sails, estos archivos se colocan en la carpeta `assets/`. Cuando levantamos la aplicación, añadimos o cambiamos archivos de la carpeta `assets/`; el pipeline de Sails procesa y sincroniza dichos archivos en un folder oculto `.tmp/public/`.
@@ -59,7 +59,7 @@ Los contenidos de dicha carpeta son los que Sails muestra en tiempo de ejecució
 <br>
 <a href="#Cabecera">Cabecera</a>
 
-<br>
+
 <a name="Vistas"></a>
 ### Vistas
 En Sails, las vistas son plantillas que son compiladas en el servidor dentro de las páginas HTML. En la mayoría de los casos, las vistas son usadas como respuesta a una petición HTTP entrante para la página de inicio.
@@ -71,7 +71,7 @@ De manera alternativa, una vista puede ser compilada directamente dentro de una 
 <br>
 <a href="#Cabecera">Cabecera</a>
 
-<br>
+
 <a name="Rutas"></a>
 ### Rutas
 La característica más básica de una página es la habilidad de interpretar una petición enviada a una URL, para luego enviar una respuesta. Para hacer esto, la aplicación tiene que ser capaz de distinguir una URL de otra.
@@ -83,7 +83,7 @@ Como la mayoría de los framework web, Sails provee un enrutador: un mecanismo p
 <br>
 <a href="#Cabecera">Cabecera</a>
 
-<br>
+
 <a name="Controladores"></a>
 ### Controladores
 Los controladores son los objetos principales en una aplicación Sails que son los responsables de responder las peticiones de un navegador web, aplicación móvil o cualquier otro sistema capaz de comunicarse con un servidor. Usualmente estos actúan como un hombre en el medio entre los modelos y las vistas. Para muchas aplicaciones, los controladores contienen todo la lógica del negocio del proyecto.
@@ -93,7 +93,7 @@ Los controladores son los objetos principales en una aplicación Sails que son l
 <br>
 <a href="#Cabecera">Cabecera</a>
 
-<br>
+
 <a name="Pipeline"></a>
 ### Pipeline
 El pipeline es el lugar en donde se organizan todos los assets que van a ser inyectados en las vistas, y que pueden ser encontradas en el archivo `tasks/pipeline.js`. Configurar estos assets es simple y usa un archivo de configuración grunt y patrones wildcard. Estos están repartidos en tres secciones.
@@ -121,7 +121,7 @@ Para instalar Sails en nuestro computador de manera global, lo hacemos con npm u
 <br>
 <a href="#Cabecera">Cabecera</a>
 
-<br>
+
 <a name="Proyecto"></a>
 ### Crear Proyecto Sails
 Para crear un proyecto en Sails, ejecutamos el siguiente comando en la carpeta donde queremos guardarlo.
@@ -365,7 +365,7 @@ Para hacer un mejor traslado entre las vistas desde la vista de la página princ
 <br>
 <a href="#Cabecera">Cabecera</a>
 
-<br>
+
 <a name="Controlador"></a>
 ### Crear Controlador para el Proyecto
 Primero, para crear un controlador para el proyecto utilizamos el siguiente comando.
