@@ -121,7 +121,7 @@ Para instalar Sails en nuestro computador de manera global, lo hacemos con npm u
 <br>
 <a href="#Cabecera">Cabecera</a>
 
-
+<br>
 <a name="Proyecto"></a>
 ### Crear Proyecto Sails
 Para crear un proyecto en Sails, ejecutamos el siguiente comando en la carpeta donde queremos guardarlo.
@@ -365,7 +365,7 @@ Para hacer un mejor traslado entre las vistas desde la vista de la página princ
 <br>
 <a href="#Cabecera">Cabecera</a>
 
-
+<br>
 <a name="Controlador"></a>
 ### Crear Controlador para el Proyecto
 Primero, para crear un controlador para el proyecto utilizamos el siguiente comando.
@@ -438,6 +438,16 @@ module.exports = {
 <p align="center">
     <img src="https://raw.githubusercontent.com/Andreu-95/Tec_Web_Js/10-Sails/Informe/Images/sails22.png">
 </p>
+
+<br>
+<a href="#Cabecera">Cabecera</a>
+
+<a name="ConRec"></a>
+## Conclusiones y Recomendaciones
+- La práctica nos ayudó a comprender un poco más del modelo vista controlador y el porque muchas páginas web lo utilizan. En sí, hace que todo este de manera organizada y que el acceso a sus diferentes componentes sea sencillo.
+- Sails es un framework que cuenta con una gran cantidad de herramientas para trabajar con páginas web, y que hace que todo se realice de manera sencilla, dejándonos a nosotros encargarnos del código y no tanto de como relacionar todas las partes.
+- Es recomendable, que cada vez que se cree un nuevo archivo, sea del tipo que sea, se reinicie el servicio ya que, caso contrario, no podremos observar los cambios que se realizaron.
+- Se recomienda modificar solo los archivos que sean necesarios, para así evitar cualquier conflicto o error con Sails.
 
 <br>
 <a href="#Cabecera">Cabecera</a>
