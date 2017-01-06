@@ -442,6 +442,7 @@ module.exports = {
 <br>
 <a href="#Cabecera">Cabecera</a>
 
+<br>
 <a name="ConRec"></a>
 ## Conclusiones y Recomendaciones
 - La práctica nos ayudó a comprender un poco más del modelo vista controlador y el porque muchas páginas web lo utilizan. En sí, hace que todo este de manera organizada y que el acceso a sus diferentes componentes sea sencillo.
