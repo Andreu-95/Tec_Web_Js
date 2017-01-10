@@ -41,3 +41,8 @@ sails generate api nombreApi
 ### Generar modelo
 
 sails generate model nombreModelo
+
+### Blueprint Shortcuts
+http://localhost:1337/Usuario/create?=nombres=Andrés&apellidos=Guerra
+http://localhost:1337/Usuario/destroy/5
+http://localhost:1337/Usuario/update/6?nombres=Andres
