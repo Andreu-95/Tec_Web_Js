@@ -45,10 +45,6 @@ module.exports.blueprints = {
   ***************************************************************************/
 
   // actions: true,
-    
-    // http://localhost:1337/Usuario/create?=nombres=Andrés&apellidos=Guerra
-    // http://localhost:1337/Usuario/destroy/5
-    // http://localhost:1337/Usuario/update/6?nombres=Andres
 
   /***************************************************************************
   *                                                                          *
@@ -87,7 +83,7 @@ module.exports.blueprints = {
   *                                                                          *
   ***************************************************************************/
 
-  // shortcuts: true,
+  shortcuts: false,
 
   /***************************************************************************
   *                                                                          *
