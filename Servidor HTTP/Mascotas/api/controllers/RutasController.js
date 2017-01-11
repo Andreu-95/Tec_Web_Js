@@ -8,7 +8,14 @@
 module.exports = {
 	home: function (req, res) {
         // res.view(String: Nombre vista, Datos JSON)
-        return res.view('vistas/home')
+        return res.view('vistas/home', {
+            titulo: 'Inicio',
+            numero: 1,
+            mauricio: {
+                nombre: 'Mauricio',
+                cedula: '1730293841'
+            }
+        })
     }
 };
 
