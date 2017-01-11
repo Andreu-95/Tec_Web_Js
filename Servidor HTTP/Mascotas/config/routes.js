@@ -55,5 +55,7 @@ module.exports.routes = {
     
     '/Cuenca': {
         view: 'cuenca'
-    }
+    },
+    
+    'get /inicio': 'RutasController.home'
 };
