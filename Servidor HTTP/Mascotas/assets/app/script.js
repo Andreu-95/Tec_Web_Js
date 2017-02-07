@@ -1,1 +1,0 @@
-alert('No se deben usar alertas');
