@@ -9,7 +9,7 @@
 
 module.exports = {
 
-    crearUsuario: function (req, res) {
+    CrearUsuario: function (req, res) {
         //   Se accede asi: /Usuario/crearUsuario
 
         // Guardando todos los parametros en la variable parametros
@@ -38,7 +38,8 @@ module.exports = {
         }
 
     },
-    crearUsuarioForm: function (req, res) {
+    
+    /*crearUsuarioForm: function (req, res) {
 
         var parametros = req.allParams();
         console.log(parametros);
@@ -75,6 +76,6 @@ module.exports = {
             return res.badRequest('Metodo invalido');
         }
 
-    }
+    }*/
 
 };
