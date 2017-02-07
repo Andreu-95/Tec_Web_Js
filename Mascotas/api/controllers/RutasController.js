@@ -9,12 +9,12 @@ module.exports = {
 
     home: function (req, res) {
 
-        return res.view('homepage')
+        return res.view('vistas/home');
 
     },
     crearUsuario: function (req, res) {
 
-        return res.view('vistas/crearUsuario')
+        return res.view('vistas/usuario/crearUsuario');
 
     }
 
