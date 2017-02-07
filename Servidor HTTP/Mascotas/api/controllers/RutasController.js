@@ -15,7 +15,11 @@ module.exports = {
                 nombre: 'Mauricio',
                 cedula: '1730293841'
             }
-        })
+        });
+    },
+    
+    crearUsuario: function (req, res) {
+        return res.view('vistas/crearUsuario');
     }
 };
 
