@@ -20,7 +20,7 @@ module.exports = {
                 rawError: "Ruta equivocada",
                 url: "/Inicio"
             }
-        })
+        });
     }
 
 };
