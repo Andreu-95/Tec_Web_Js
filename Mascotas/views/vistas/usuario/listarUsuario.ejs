@@ -1,0 +1,19 @@
+<% for (var i=0; i<usuarios.length; i++) { %>
+
+    <div class="row">
+        <div class="col-sm-5 text-center">
+            <div class="panel panel-default">
+                <h3> <%= i+1 %> <%= usuarios[i].apellidos %> </h3>
+            </div>
+        </div>
+        <div class="col-sm-7 text-center">
+            <div class="panel panel-info">
+                <p>
+                    <%= usuarios[i].apellidos %>
+                        <%= usuarios[i].nombres %>
+                </p>
+            </div>
+        </div>
+    </div>
+
+<% } %>
