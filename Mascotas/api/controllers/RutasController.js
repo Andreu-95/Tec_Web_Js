@@ -10,9 +10,11 @@ module.exports = {
     home: function (req, res) {
         return res.view('vistas/home');
     },
+    
     crearUsuario: function (req, res) {
         return res.view('vistas/usuario/crearUsuario');
     },
+    
     error: function (req, res) {
         return res.view('vistas/error', {
             error: {
@@ -22,6 +24,7 @@ module.exports = {
             }
         });
     },
+    
     listarUsuarios: function (req, res) {
         Usuario.find().exec(function (err, usuariosEncontrados) {
             if (err) {
@@ -38,5 +41,9 @@ module.exports = {
                 });
             }
         });
+    },
+    
+    editarUsuario: function (req, res) {
+        return res.view('vistas/usuario/editarUsuario');
     }
 };

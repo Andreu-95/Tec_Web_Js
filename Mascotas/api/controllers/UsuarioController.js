@@ -21,7 +21,7 @@ module.exports = {
                     apellidos: parametros.apellidos,
                     correo: parametros.correo
                 }
-                
+
                 if (usuarioCrear.correo == "") {
                     delete usuarioCrear.correo
                 }
@@ -37,7 +37,21 @@ module.exports = {
                         });
                     }
 
-                    return res.view('vistas/usuario/crearUsuario');
+                    Usuario.find().exec(function (err, usuariosEncontrados) {
+                        if (err) {
+                            return res.view('vistas/error', {
+                                error: {
+                                    descripcion: "Hubo un problema cargando los usuarios",
+                                    rawError: err,
+                                    url: "/ListarUsuarios"
+                                }
+                            });
+                        } else {
+                            return res.view('vistas/usuario/listarUsuario', {
+                                usuarios: usuariosEncontrados
+                            });
+                        }
+                    });
                 });
             } else {
                 return res.view('vistas/error', {
@@ -58,45 +72,112 @@ module.exports = {
             })
         }
 
-    }
+    },
 
-    /*crearUsuarioForm: function (req, res) {
-
+    BorrarUsuario: function (req, res) {
         var parametros = req.allParams();
-        console.log(parametros);
 
-        if (req.method == 'POST') {
-            if (parametros.nombres && parametros.apellidos) {
-                //creo el usuario
-                Usuario.create({
-                    nombres: parametros.nombres,
-                    apellidos: parametros.apellidos,
-                    correo: parametros.correo
-                }).exec(function (error, usuarioCreado) {
-                    if (error) return res.serverError()
-                    sails.log.info(usuarioCreado);
-
-                    return res.view('vistas/home', {
-                        titulo: 'Inicio',
-                        numero: 1,
-                        mauricio: {
-                            nombre: 'Mauricio',
-                            cedula: 1718137159
+        if (parametros.id) {
+            Usuario.destroy({
+                id: parametros.id
+            }).exec(function (err, usuariosRemovido) {
+                if (err) {
+                    return res.view('vistas/error', {
+                        error: {
+                            descripcion: "Hubo un problema al remover el usuario",
+                            rawError: err,
+                            url: "/ListarUsuarios"
                         }
                     });
+                }
+
+                Usuario.find().exec(function (err, usuariosEncontrados) {
+                    if (err) {
+                        return res.view('vistas/error', {
+                            error: {
+                                descripcion: "Hubo un problema cargando los usuarios",
+                                rawError: err,
+                                url: "/ListarUsuarios"
+                            }
+                        });
+                    } else {
+                        return res.view('vistas/usuario/listarUsuario', {
+                            usuarios: usuariosEncontrados
+                        });
+                    }
                 });
-
-
-
-
-            } else {
-                // bad Request
-                return res.badRequest('No envia todos los parametros');
-            }
+            });
         } else {
-            return res.badRequest('Metodo invalido');
+            return res.view('vistas/error', {
+                error: {
+                    descripcion: "Necesitamos el ID para borrar el usuario",
+                    rawError: "No envía ID",
+                    url: "/ListarUsuarios"
+                }
+            })
         }
+    },
 
-    }*/
+    EditarUsuario: function (req, res) {
+        var parametros = req.allParams();
 
+        if (parametros.id && parametros.nombres || parametros.apellidos || parametros.correo) {
+            
+            var usuarioEditar = {
+                nombres: parametros.nombres,
+                apellidos: parametros.apellidos,
+                correo: parametros.correo
+            };
+            
+            if (usuarioEditar.nombres == '') {
+                delete usuarioEditar.nombres;
+            }
+            
+            if (usuarioEditar.apellidos == '') {
+                delete usuarioEditar.apellidos;
+            }
+            
+            if (usuarioEditar.correo == '') {
+                delete usuarioEditar.correo;
+            }
+            
+            Usuario.update({
+                id: parametros.id
+            }, usuarioEditar).exec(function (err, usuariosRemovido) {
+                if (err) {
+                    return res.view('vistas/error', {
+                        error: {
+                            descripcion: "Hubo un problema al editar el usuario",
+                            rawError: err,
+                            url: "/ListarUsuarios"
+                        }
+                    });
+                }
+
+                Usuario.find().exec(function (err, usuariosEncontrados) {
+                    if (err) {
+                        return res.view('vistas/error', {
+                            error: {
+                                descripcion: "Hubo un problema cargando los usuarios",
+                                rawError: err,
+                                url: "/ListarUsuarios"
+                            }
+                        });
+                    } else {
+                        return res.view('vistas/usuario/listarUsuario', {
+                            usuarios: usuariosEncontrados
+                        });
+                    }
+                });
+            });
+        } else {
+            return res.view('vistas/error', {
+                error: {
+                    descripcion: "Necesitamos todos los campos para editar el usuario",
+                    rawError: "No envía todos los campos",
+                    url: "/EditarUsuario"
+                }
+            })
+        }
+    }
 };
