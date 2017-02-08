@@ -1,25 +1,27 @@
-<h1>Lista de Uusiaros</h1>
+<h1>Lista de Usuarios</h1>
 <p>Aquí se listan todos los usuarios del sistema de mascotas</p>
-
+<br>
 
 <% for (var i=0; i<usuarios.length; i++) { %>
 
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="panel panel-default text-center">
-                <h1 class="ma-pad"> <%= usuarios[i].apellidos %> </h1>
+    <div class="panel">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-default text-center">
+                    <h1 class="ma-pad"> <%= usuarios[i].apellidos %> </h1>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-6">
-            <div class="panel panel-info text-center ma-borde">
-                <p class="ma-top-borde">
-                    <%= usuarios[i].apellidos %>
-                        <%= usuarios[i].nombres %>
-                </p>
-                <p>
-                    <%= usuarios[i].correo %>
-                </p>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6">
+                <div class="panel panel-info text-center ma-borde">
+                    <p class="ma-top-borde">
+                        <%= usuarios[i].apellidos %>
+                            <%= usuarios[i].nombres %>
+                    </p>
+                    <p>
+                        <%= usuarios[i].correo %>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
