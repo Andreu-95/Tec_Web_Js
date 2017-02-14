@@ -143,7 +143,7 @@ module.exports = {
             
             Usuario.update({
                 id: parametros.id
-            }, usuarioEditar).exec(function (err, usuariosRemovido) {
+            }, usuarioEditar).exec(function (err, usuarioEditado) {
                 if (err) {
                     return res.view('vistas/error', {
                         error: {
@@ -173,9 +173,9 @@ module.exports = {
         } else {
             return res.view('vistas/error', {
                 error: {
-                    descripcion: "Necesitamos todos los campos para editar el usuario",
+                    descripcion: "Necesitamos el ID y al menos un campo para editar el usuario",
                     rawError: "No envía todos los campos",
-                    url: "/EditarUsuario"
+                    url: "/ListarUsuarios"
                 }
             })
         }
