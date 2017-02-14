@@ -141,6 +141,10 @@ module.exports = {
                 delete usuarioEditar.correo;
             }
             
+            if (usuarioEditar.password == '') {
+                delete usuarioEditar.password;
+            }
+            
             Usuario.update({
                 id: parametros.id
             }, usuarioEditar).exec(function (err, usuarioEditado) {
