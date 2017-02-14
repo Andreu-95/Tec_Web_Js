@@ -10,11 +10,11 @@ module.exports = {
     home: function (req, res) {
         return res.view('vistas/home');
     },
-    
+
     crearUsuario: function (req, res) {
         return res.view('vistas/usuario/crearUsuario');
     },
-    
+
     error: function (req, res) {
         return res.view('vistas/error', {
             error: {
@@ -24,7 +24,7 @@ module.exports = {
             }
         });
     },
-    
+
     listarUsuarios: function (req, res) {
         Usuario.find().exec(function (err, usuariosEncontrados) {
             if (err) {
@@ -42,8 +42,45 @@ module.exports = {
             }
         });
     },
-    
+
     editarUsuario: function (req, res) {
-        return res.view('vistas/usuario/editarUsuario');
+        var parametros = req.allParams(0);
+        if (parametros.id) {
+            Usuario.findOne({
+                id: parametros.id
+            }).exec(function (err, usuarioEncontrado) {
+                if (err) {
+                    return res.view('vistas/error', {
+                        error: {
+                            descripcion: "Error Inesperado",
+                            rawError: err,
+                            url: "/ListarUsuarios"
+                        }
+                    });
+                }
+
+                if (usuarioEncontrado) {
+                    return res.view('vistas/usuario/editarUsuario', {
+                        usuarioAEditar: usuarioEncontrado
+                    });
+                } else {
+                    return res.view('vistas/error', {
+                        error: {
+                            descripcion: "No se encontró el usuario con el id: " + parametros.id,
+                            rawError: "Usuario No Encontrado",
+                            url: "/ListarUsuarios"
+                        }
+                    });
+                }
+            });
+        } else {
+            return res.view('vistas/error', {
+                error: {
+                    descripcion: "No ha enviado el parámetro ID",
+                    rawError: "Faltan Parámetros",
+                    url: "/ListarUsuarios"
+                }
+            });
+        }
     }
 };
