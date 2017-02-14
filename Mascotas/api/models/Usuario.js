@@ -23,7 +23,8 @@ module.exports = {
         correo: {
             type: 'string',
             email: true,
-            defaultsTo: 'correo@invalido.com'
+            required: true,
+            unique: true
         },
         password: {
             type: 'string',
