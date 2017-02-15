@@ -39,7 +39,7 @@ module.exports.routes = {
     'get /ListarUsuarios': 'RutasController.listarUsuarios',
     'get /EditarUsuario': 'RutasController.editarUsuario',
     'get /Login': {
-        view: 'login'
+        view: 'vistas/login'
     }
 
 
