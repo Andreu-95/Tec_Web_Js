@@ -37,4 +37,8 @@ export class AppComponent implements OnInit{
   hizoFocus() {
     console.log('Hizo focus')
   }
+
+  crearTienda(formulario) {
+    console.log(formulario)
+  }
 }
