@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
+import {Response, Http} from "@angular/http";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title: string = 'Hola todos';
   nombre: string = "";
   apellido: string = "";
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit{
 
   nuevaTienda: any = {};
 
-  constructor() {
+  constructor(private _http: Http) {
     this.apellido = 'Guerra';
     this.nombre = 'Andres';
     console.log('Inicio el constructor');
@@ -39,6 +40,15 @@ export class AppComponent implements OnInit{
   }
 
   crearTienda(formulario) {
-    console.log(formulario)
+    console.log(formulario);
+    this._http
+      .post("http://localhost:1337/Tienda", formulario.valores)
+      .subscribe(
+        res => console.log('Respuesta: ', res),
+        err => console.log('Error: ', err),
+        () => {
+          console.log("Se completo la accion")
+        }
+      );
   }
 }
