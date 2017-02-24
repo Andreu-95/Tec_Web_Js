@@ -28,6 +28,10 @@ export class AppComponent implements OnInit {
       .subscribe(
         res => {
           this.tiendas = res.json()
+            .map((value) => {
+              value.formularioCerrado = true;
+              return value;
+            })
         },
         err => {
           console.log('Error GET: ', err)
@@ -71,6 +75,22 @@ export class AppComponent implements OnInit {
         },
         err => {
           console.log(err)
+        }
+      )
+  }
+
+  actualizarTienda(tienda: any) {
+    let parametros = {
+      nombre: tienda.nombre
+    };
+    this._http
+      .put(this._masterURL.url + 'Tienda/' + tienda.id, parametros)
+      .subscribe(
+        res => {
+          console.log('Respuesta: ', res.json())
+        },
+        err => {
+          console.log('Error: ', err)
         }
       )
   }

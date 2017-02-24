@@ -36,10 +36,46 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-3" *ngFor="let tienda of tiendas">
+    <div class="col-sm-12" *ngFor="let tienda of tiendas">
+      <br>
+      <pre>{{tienda | json}}</pre>
       <h3>{{tienda.nombre}}</h3>
       <p>ID: {{tienda.id}}</p>
-      <button class="btn btn-block btn-danger" (click)="borrarTienda(tienda.id)">Borrar</button>
+      <div class="row">
+        <div class="col-sm-6">
+          <button class="btn btn-block btn-danger" (click)="borrarTienda(tienda.id)">Borrar</button>
+        </div>
+        <div class="col-sm-6">
+          <button class="btn btn-block btn-info" (click)="actualizarTienda(tienda)">Actualizar</button>
+        </div>
+      </div>
+      <div class="row" [hidden]="tienda.formularioCerrado">
+        <div class="col-sm-12">
+          <form class="animated bounceIn" (ngSubmit)="actualizarTienda(tienda)" #ActualizarTiendaForm="ngForm">
+            <div class="form-group">
+              <label for="nombreTienda">Nombre Tienda</label>
+              <div class="animated slideInUp" [hidden]="!nombre.errors">
+                <span class=" bg-primary" *ngIf="nombre.errors && (nombre.dirty || nombre.touched)">Ingrese un nombre con mínimo 4 caracteres</span>
+              </div>
+              <input type="text"
+                     required
+                     id="nuevoTienda"
+                     name="nombre"
+                     minlength="4"
+                     class="form-control"
+                     placeholder="Ingrese un nombre de tienda como Adidas"
+                     [(ngModel)]="tienda.nombre"
+                     #nombre="ngModel"
+                     #nombreElm>
+            </div>
+            <button class="btn btn-block btn-success"
+                    type="submit"
+                    [disabled]="disabledButtons.NuevaTiendaFormSubmitButton || !ActualizarTiendaForm.valid">Actualizar
+              Tienda
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>
