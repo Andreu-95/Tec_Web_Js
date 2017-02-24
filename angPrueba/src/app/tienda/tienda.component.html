@@ -38,15 +38,17 @@
   <div class="row">
     <div class="col-sm-12" *ngFor="let tienda of tiendas">
       <br>
-      <pre>{{tienda | json}}</pre>
       <h3>{{tienda.nombre}}</h3>
       <p>ID: {{tienda.id}}</p>
       <div class="row animated flipInY" [hidden]="!tienda.formularioCerrado">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <button class="btn btn-block btn-danger" (click)="borrarTienda(tienda.id)">Borrar</button>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <button class="btn btn-block btn-info" (click)="tienda.formularioCerrado = !tienda.formularioCerrado">Actualizar</button>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a [routerLink]="[tienda.id,'productos']">Ir a Productos</a>
         </div>
       </div>
       <br>
