@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Response, Http} from "@angular/http";
+import {MasterURLService} from "./services/master-url.service";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
 
   nuevaTienda: any = {};
 
-  constructor(private _http: Http) {
+  constructor(private _http: Http, private _masterURL: MasterURLService) {
     this.apellido = 'Guerra';
     this.nombre = 'Andres';
     console.log('Inicio el constructor');
@@ -42,7 +43,7 @@ export class AppComponent implements OnInit {
   crearTienda(formulario) {
     console.log(formulario);
     this._http
-      .post("http://localhost:1337/Tienda", formulario.valores)
+      .post(this._masterURL.url, {})
       .subscribe(
         res => console.log('Respuesta: ', res),
         err => console.log('Error: ', err),
