@@ -36,8 +36,10 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-12">
-      <pre class="animated slideInUp">{{tiendas | json}}</pre>
+    <div class="col-sm-3" *ngFor="let tienda of tiendas">
+      <h3>{{tienda.nombre}}</h3>
+      <p>ID: {{tienda.id}}</p>
+      <button class="btn btn-block btn-danger" (click)="borrarTienda(tienda.id)">Borrar</button>
     </div>
   </div>
 </div>

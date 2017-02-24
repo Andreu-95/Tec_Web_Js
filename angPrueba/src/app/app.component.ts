@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   disabledButtons = {
     NuevaTiendaFormSubmitButton: false
   };
-  tiendas;
+  tiendas = [];
 
   constructor(private _http: Http, private _masterURL: MasterURLService) {
     console.log('Inicio el constructor');
@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
           console.log('Respuesta: ', res);
           this.nuevaTienda = {};
           this.disabledButtons.NuevaTiendaFormSubmitButton = false;
+          this.tiendas.push(res.json());
         },
         err => {
           console.log('Error: ', err);
@@ -55,5 +56,22 @@ export class AppComponent implements OnInit {
           console.log("Se completo la accion")
         }
       );
+  }
+
+  borrarTienda(id: number) {
+    let parametros = {
+      id: id
+    };
+    this._http
+      .delete(this._masterURL.url + "Tienda/" + parametros.id)
+      .subscribe(
+        res => {
+          let tiendaBorrada = res.json();
+          this.tiendas = this.tiendas.filter(value => tiendaBorrada.id != value.id)
+        },
+        err => {
+          console.log(err)
+        }
+      )
   }
 }
