@@ -43,7 +43,9 @@ export class AppComponent implements OnInit {
   crearTienda(formulario) {
     console.log(formulario);
     this._http
-      .post(this._masterURL.url, {})
+      .post(this._masterURL.url + 'Tienda', {
+        nombre: formulario.value.nombre
+      })
       .subscribe(
         res => console.log('Respuesta: ', res),
         err => console.log('Error: ', err),

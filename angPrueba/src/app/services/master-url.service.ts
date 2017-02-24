@@ -5,7 +5,7 @@ export class MasterURLService {
   private _url: string;
 
   constructor() {
-    this._url = 'http://localhost:1337/Tienda'
+    this._url = 'http://localhost:1337/'
   }
 
   get url(): string {
