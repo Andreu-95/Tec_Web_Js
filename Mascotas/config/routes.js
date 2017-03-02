@@ -40,7 +40,10 @@ module.exports.routes = {
     'get /EditarUsuario': 'RutasController.editarUsuario',
     'get /Login': {
         view: 'vistas/login'
-    }
+    },
+    'get /CrearMascota': 'RutasController.crearMascota',
+    'get /EditarMascota': 'RutasController.editarMascota',
+    'get /ListarMascotas': 'RutasController.listarMascotas'
 
 
     /***************************************************************************

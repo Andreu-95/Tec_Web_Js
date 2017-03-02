@@ -1,0 +1,45 @@
+<h1 class="text-center">Editar Usuario - <%= mascotaAEditar.nombre %></h1>
+
+<div class="row">
+  <div class="col-lg-5">
+    <form action="/Mascota/EditarMascota" method="post">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre de su mascota" name="nombre">
+      </div>
+      <div class="form-group">
+        <label for="fecha">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="fecha" name="fechaNacimiento">
+      </div>
+      <div class="form-group">
+        <label for="pais">País de Nacimiento</label>
+        <select class="form-control" name="paisNacimiento" id="pais">
+          <option value="Ecuador">Ecuador</option>
+          <option value="Peru">Peru</option>
+          <option value="Colombia">Colombia</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="raza">Raza</label>
+        <select class="form-control" name="idRaza" id="raza">
+          <% for(var i = 0; i < razas.length; i++){ %>
+          <option value="<%= razas[i].id %>">
+            <%= razas[i].nombre %>
+          </option>
+          <% } %>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="idmascota" name="id" value="<%= mascotaAEditar.id %>">
+      </div>
+      <button type="submit" class="btn btn-success">Editar Mascota</button>
+    </form>
+  </div>
+  <div class="col-lg-2"></div>
+  <div class="col-lg-5 text-center">
+    <h2><%= mascotaAEditar.nombre %></h2>
+    <h3><%= razas[mascotaAEditar.idRaza].nombre %></h3>
+    <h4><%= mascotaAEditar.fechaNacimiento %></h4>
+    <h5><%= mascotaAEditar.paisNacimiento %></h5>
+  </div>
+</div>
