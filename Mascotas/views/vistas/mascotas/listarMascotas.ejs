@@ -18,18 +18,20 @@
     <th>Editar</th>
     <th>Borrar</th>
   </tr>
-  <% for (var i=0; i<mascotas.length; i++) { %>
-    <tr>
-      <td><%= mascotas[i].nombre %></td>
-      <td><%= mascotas[i].fechaNacimiento %></td>
-      <td><%= mascotas[i].paisNacimiento %></td>
-      <td><%= razas[mascotas[i].idRaza].nombre %></td>
-      <td>
-        <a href="/EditarMascota?id=<%= mascotas[i].id %>" class="btn btn-info btn-block">Editar</a>
-      </td>
-      <td>
-        <a href="/Mascota/BorrarMascota?id=<%= mascotas[i].id %>" class="btn btn-danger btn-block">X</a>
-      </td>
-    </tr>
+  <% for (var i=0; i<razas.length; i++) { %>
+    <% for (var j=0; j<razas[i].mascotas.length; j++) { %>
+      <tr>
+        <td><%= razas[i].mascotas[j].nombre %></td>
+        <td><%= razas[i].mascotas[j].fechaNacimiento %></td>
+        <td><%= razas[i].mascotas[j].paisNacimiento %></td>
+        <td><%= razas[i].nombre %></td>
+        <td>
+          <a href="/EditarMascota?id=<%= razas[i].mascotas[j].id %>" class="btn btn-info btn-block">Editar</a>
+        </td>
+        <td>
+          <a href="/Mascota/BorrarMascota?id=<%= razas[i].mascotas[j].id %>" class="btn btn-danger btn-block">X</a>
+        </td>
+      </tr>
+    <% } %>
   <% } %>
 </table>

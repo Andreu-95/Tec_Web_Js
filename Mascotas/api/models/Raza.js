@@ -11,6 +11,7 @@ module.exports = {
     nombre: {
       type: 'string',
       enum: ['Bulldog', 'Chihuahua', 'Pitbull'],
+      unique: true,
       required: true
     },
 
@@ -18,5 +19,11 @@ module.exports = {
       collection: 'Mascota',
       via: 'idRaza'
     }
+  },
+
+  afterDestroy: function (destroyedRecords, cb) {
+    Mascota.destroy({
+      idRaza: _.pluck(destroyedRecords, 'id')
+    }).exec(cb)
   }
 };

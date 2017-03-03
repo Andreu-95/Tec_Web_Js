@@ -157,33 +157,83 @@ module.exports = {
   },
 
   listarMascotas: function (req, res) {
-    Raza.find().exec(function (err, razasEncontradas) {
+    Raza.find().populate('mascotas').exec(function (err, razasEncontradas) {
       if (err) {
         return res.view('vistas/error', {
           error: {
             descripcion: "Error Inesperado",
             rawError: err,
-            url: "/CrearMascota"
+            url: "/ListasMascotas"
           }
         });
       }
 
-      Mascota.find().exec(function (err, mascotasEncontradas) {
+      return res.view('vistas/mascotas/listarMascotas', {
+        razas: razasEncontradas
+      });
+    });
+  },
+
+  crearRaza: function (req, res) {
+    return res.view('vistas/razas/crearRaza');
+  },
+
+  editarRaza: function (req, res) {
+    var parametros = req.allParams();
+    if (parametros.id) {
+      Raza.findOne({
+        id: parametros.id
+      }).exec(function (err, razaEncontrada) {
         if (err) {
           return res.view('vistas/error', {
             error: {
-              descripcion: "Hubo un problema cargando las mascotas",
+              descripcion: "Error Inesperado",
               rawError: err,
-              url: "/ListarMascotas"
+              url: "/ListarRazas"
             }
           });
+        }
+
+        if (razaEncontrada) {
+          return res.view('vistas/razas/editarRaza', {
+            razaAEditar: razaEncontrada
+          })
         } else {
-          return res.view('vistas/mascotas/listarMascotas', {
-            razas: razasEncontradas,
-            mascotas: mascotasEncontradas
+          return res.view('vistas/error', {
+            error: {
+              descripcion: "No se encontró la raza con el id: " + parametros.id,
+              rawError: "Raza No Encontrada",
+              url: "/ListarRazas"
+            }
           });
         }
       })
-    });
+    } else {
+      return res.view('vistas/error', {
+        error: {
+          descripcion: "No ha enviado el parámetro ID",
+          rawError: "Faltan Parámetros",
+          url: "/ListarRazas"
+        }
+      });
+    }
+  },
+
+  listarRazas: function (req, res) {
+    Raza.find().exec(function (err, razasEncontradas) {
+      if (err) {
+        return res.view('vistas/error', {
+          error: {
+            descripcion: "Hubo un problema cargando las razas",
+            rawError: err,
+            url: "/ListarRazas"
+          }
+        });
+      } else {
+        return res.view('vistas/razas/listarRazas', {
+          razas: razasEncontradas
+        });
+      }
+    })
   }
 };

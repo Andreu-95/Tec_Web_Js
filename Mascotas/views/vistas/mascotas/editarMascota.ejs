@@ -1,4 +1,4 @@
-<h1 class="text-center">Editar Usuario - <%= mascotaAEditar.nombre %></h1>
+<h1 class="text-center">Editar Mascota - <%= mascotaAEditar.nombre %></h1>
 
 <div class="row">
   <div class="col-lg-5">
@@ -38,7 +38,11 @@
   <div class="col-lg-2"></div>
   <div class="col-lg-5 text-center">
     <h2><%= mascotaAEditar.nombre %></h2>
-    <h3><%= razas[mascotaAEditar.idRaza].nombre %></h3>
+    <% for (var i=0; i<razas.length; i++) { %>
+      <% if (razas[i].id == mascotaAEditar.idRaza) { %>
+        <h3><%= razas[i].nombre %></h3>
+      <% } %>
+    <% } %>
     <h4><%= mascotaAEditar.fechaNacimiento %></h4>
     <h5><%= mascotaAEditar.paisNacimiento %></h5>
   </div>

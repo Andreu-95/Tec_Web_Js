@@ -50,13 +50,5 @@ module.exports.policies = {
 	// }
 
     RutasController: {
-        home: true,
-        error: true,
-        crearUsuario: 'autenticado',
-        editarUsuario: ['autenticado', 'mismoUsuario'],
-        listarUsuarios: 'autenticado',
-        crearMascota: 'autenticado',
-        editarMascota: 'autenticado',
-        listarMascotas: 'autenticado'
     }
 };

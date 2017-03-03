@@ -34,33 +34,20 @@ module.exports = {
           });
         }
 
-        Raza.find().exec(function (err, razasEncontradas) {
+        Raza.find().populate('mascotas').exec(function (err, razasEncontradas) {
           if (err) {
             return res.view('vistas/error', {
               error: {
                 descripcion: "Error Inesperado",
                 rawError: err,
-                url: "/CrearMascota"
+                url: "/ListasMascotas"
               }
             });
           }
 
-          Mascota.find().exec(function (err, mascotasEncontradas) {
-            if (err) {
-              return res.view('vistas/error', {
-                error: {
-                  descripcion: "Hubo un problema cargando las mascotas",
-                  rawError: err,
-                  url: "/ListarMascotas"
-                }
-              });
-            } else {
-              return res.view('vistas/mascotas/listarMascotas', {
-                razas: razasEncontradas,
-                mascotas: mascotasEncontradas
-              });
-            }
-          })
+          return res.view('vistas/mascotas/listarMascotas', {
+            razas: razasEncontradas
+          });
         });
       })
     } else {
@@ -110,33 +97,20 @@ module.exports = {
           });
         }
 
-        Raza.find().exec(function (err, razasEncontradas) {
+        Raza.find().populate('mascotas').exec(function (err, razasEncontradas) {
           if (err) {
             return res.view('vistas/error', {
               error: {
                 descripcion: "Error Inesperado",
                 rawError: err,
-                url: "/CrearMascota"
+                url: "/ListasMascotas"
               }
             });
           }
 
-          Mascota.find().exec(function (err, mascotasEncontradas) {
-            if (err) {
-              return res.view('vistas/error', {
-                error: {
-                  descripcion: "Hubo un problema cargando las mascotas",
-                  rawError: err,
-                  url: "/ListarMascotas"
-                }
-              });
-            } else {
-              return res.view('vistas/mascotas/listarMascotas', {
-                razas: razasEncontradas,
-                mascotas: mascotasEncontradas
-              });
-            }
-          })
+          return res.view('vistas/mascotas/listarMascotas', {
+            razas: razasEncontradas
+          });
         });
       })
     } else {
@@ -166,33 +140,20 @@ module.exports = {
           });
         }
 
-        Raza.find().exec(function (err, razasEncontradas) {
+        Raza.find().populate('mascotas').exec(function (err, razasEncontradas) {
           if (err) {
             return res.view('vistas/error', {
               error: {
                 descripcion: "Error Inesperado",
                 rawError: err,
-                url: "/CrearMascota"
+                url: "/ListasMascotas"
               }
             });
           }
 
-          Mascota.find().exec(function (err, mascotasEncontradas) {
-            if (err) {
-              return res.view('vistas/error', {
-                error: {
-                  descripcion: "Hubo un problema cargando las mascotas",
-                  rawError: err,
-                  url: "/ListarMascotas"
-                }
-              });
-            } else {
-              return res.view('vistas/mascotas/listarMascotas', {
-                razas: razasEncontradas,
-                mascotas: mascotasEncontradas
-              });
-            }
-          })
+          return res.view('vistas/mascotas/listarMascotas', {
+            razas: razasEncontradas
+          });
         });
       })
     } else {
