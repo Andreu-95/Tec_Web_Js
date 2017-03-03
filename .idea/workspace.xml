@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed2abc7-a0e7-49ee-9490-37e1398ee7b8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/api/controllers/MascotaController.js" afterPath="$PROJECT_DIR$/Mascotas/api/controllers/MascotaController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/api/controllers/RazaController.js" afterPath="$PROJECT_DIR$/Mascotas/api/controllers/RazaController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/api/controllers/RutasController.js" afterPath="$PROJECT_DIR$/Mascotas/api/controllers/RutasController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/api/models/Raza.js" afterPath="$PROJECT_DIR$/Mascotas/api/models/Raza.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/config/policies.js" afterPath="$PROJECT_DIR$/Mascotas/config/policies.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/config/routes.js" afterPath="$PROJECT_DIR$/Mascotas/config/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/views/layout.ejs" afterPath="$PROJECT_DIR$/Mascotas/views/layout.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/views/vistas/mascotas/editarMascota.ejs" afterPath="$PROJECT_DIR$/Mascotas/views/vistas/mascotas/editarMascota.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/views/vistas/mascotas/listarMascotas.ejs" afterPath="$PROJECT_DIR$/Mascotas/views/vistas/mascotas/listarMascotas.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/views/vistas/razas/crearRaza.ejs" afterPath="$PROJECT_DIR$/Mascotas/views/vistas/razas/crearRaza.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/views/vistas/razas/editarRaza.ejs" afterPath="$PROJECT_DIR$/Mascotas/views/vistas/razas/editarRaza.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/views/vistas/razas/listarRazas.ejs" afterPath="$PROJECT_DIR$/Mascotas/views/vistas/razas/listarRazas.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -101,12 +89,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Raza.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Raza.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mascotas/api/models/Raza.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
               <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="145">
+                <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -148,6 +149,7 @@
         <option value="$PROJECT_DIR$/Mascotas/api/controllers/RutasController.js" />
         <option value="$PROJECT_DIR$/Mascotas/views/vistas/mascotas/editarMascota.ejs" />
         <option value="$PROJECT_DIR$/Mascotas/config/policies.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -515,12 +517,12 @@
       <updated>1488432468503</updated>
       <workItem from="1488432470130" duration="6958000" />
       <workItem from="1488457380930" duration="2244000" />
-      <workItem from="1488498878251" duration="5558000" />
+      <workItem from="1488498878251" duration="5653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14760000" />
+    <option name="totallyTimeSpent" value="14855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -862,6 +864,17 @@
         <state relative-caret-position="578">
           <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="145">
+            <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
